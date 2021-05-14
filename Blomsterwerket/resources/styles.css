@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 120px 5fr;
+  grid-template-rows: 120px 5fr 120px;
+  height: 100vh;
+  background-color: #f4f2f4;
+  width: 100%;
+}
+
+.search {
+  background-color: #efd0ca;
+  border-bottom: 1px solid #dabfba;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials {
+  background-color: #efd0ca;
+  border-bottom: 1px solid #dabfba;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.language {
+  background-color: #efd0ca;
+}
+
+.footer {
+  background-color: #f4f2f4;
+}
+
+.mainContent {
+  background-color: #f4f2f4;
+}
+
+.navheader {
+  background-color: #f4f2f4;
+}
+
+/* Search button */
+
+.search-icon-container {
+  height: 25px;
+  width: 25px;
+}
+
+/* Socials */
+
+.socials-icon-container {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 100px;
+  padding: 20px;
+}
+
+/* Navigation Bar */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.navbar-title {
+  cursor: pointer;
+  color: #333333;
+}
+
+.nav-links {
+  list-style: none;
+  color: #333333;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  height: 5px;
+  width: 5px;
+}
+
+.buttons-header {
+  display: inline-block;
+}
+
+.buttons-header img {
+  height: 25px;
+  width: 25px;
+}
+
+/* Main Content */
+
+.mainContent h1 {
+  padding-top: 30px;
+  padding-left: 10%;
+  font-size: 45px;
+  color: #333333;
+}
+
+.mainContent h3 {
+  padding: 10px 10%;
+  color: #333333;
+}
+
+.velg-blomst-knapp {
+  padding-left: 10%;
+}
+
+.velg-blomst-knapp button {
+  display: flex;
+  background-color: #df8d9c;
+  border: none;
+  color: white;
+  padding: 30px 90px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Background img */
+
+.bg-img {
+  padding: 150px;
+  margin: 150px;
+  background-image: url("C:/Users/fromr/Desktop/Utvikling/Development/Blomsterwerket/resources/images/avrielle-suleiman-iLCMK21AWqE-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: 10px;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: flex-end;
+}
