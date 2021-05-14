@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Open+Sans&family=Taviraj:wght@200&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -73,11 +78,16 @@ header {
 .navbar-title {
   cursor: pointer;
   color: #333333;
+  font-family: "Frank Ruhl Libre", sans-serif;
+  font-weight: 300;
+
 }
 
 .nav-links {
   list-style: none;
   color: #333333;
+  font-family: "Open Sans", sans-serif;
+  opacity: 0.8;
 }
 
 .nav-links li {
@@ -110,15 +120,20 @@ button {
 /* Main Content */
 
 .mainContent h1 {
+  font-family: "Frank Ruhl Libre", sans-serif;
   padding-top: 30px;
   padding-left: 10%;
   font-size: 45px;
   color: #333333;
+  font-weight: 300;
 }
 
 .mainContent h3 {
+  font-family: "Open Sans", sans-serif;
   padding: 10px 10%;
   color: #333333;
+  opacity: 0.8;
+  font-size: 16px;
 }
 
 .velg-blomst-knapp {
