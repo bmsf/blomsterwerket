@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Open+Sans&family=Taviraj:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300&display=swap');
 
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 /* Grid layout */
@@ -13,13 +15,14 @@ body {
   display: grid;
   grid-template-columns: 120px 5fr;
   grid-template-rows: 120px 5fr 120px;
-  height: 100vh;
   background-color: #f4f2f4;
   width: 100%;
+  min-height: 100vh;
 }
 
+
 .search {
-  background-color: #efd0ca;
+  background-color: #FAE1E1;
   border-bottom: 1px solid #dabfba;
   display: flex;
   justify-content: center;
@@ -27,7 +30,7 @@ body {
 }
 
 .socials {
-  background-color: #efd0ca;
+  background-color: #FAE1E1;
   border-bottom: 1px solid #dabfba;
   display: flex;
   justify-content: center;
@@ -35,7 +38,7 @@ body {
 }
 
 .language {
-  background-color: #efd0ca;
+  background-color: #FAE1E1;
 }
 
 .footer {
@@ -44,10 +47,14 @@ body {
 
 .mainContent {
   background-color: #f4f2f4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .navheader {
-  background-color: #f4f2f4;
+  background-color: #efd0ca;
 }
 
 /* Search button */
@@ -60,10 +67,18 @@ body {
 /* Socials */
 
 .socials-icon-container {
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 20px;
   margin-bottom: 100px;
   padding: 20px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.socials-icon-container img {
+  padding-top: 20px;
 }
 
 /* Navigation Bar */
@@ -72,7 +87,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 30px 15%;
 }
 
 .navbar-title {
@@ -93,6 +108,7 @@ header {
 .nav-links li {
   display: inline-block;
   padding: 0px 20px;
+  cursor: pointer;
 }
 
 .nav-links li a {
@@ -101,11 +117,7 @@ header {
 
 .nav-links li a:hover {
   color: #0088a9;
-}
-
-button {
-  height: 5px;
-  width: 5px;
+  
 }
 
 .buttons-header {
@@ -119,10 +131,23 @@ button {
 
 /* Main Content */
 
+.container-1-main {
+  padding-left: 15%;
+  padding-top: 3%;
+}
+
+.container-2-main {
+  background-image: url("../resources/images/mainpage3.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 18em;
+  margin-right: 13%;
+  margin-top: 20px;
+}
+
 .mainContent h1 {
   font-family: "Frank Ruhl Libre", sans-serif;
-  padding-top: 30px;
-  padding-left: 10%;
+  padding-top: 50px;
   font-size: 45px;
   color: #333333;
   font-weight: 300;
@@ -130,38 +155,33 @@ button {
 
 .mainContent h3 {
   font-family: "Open Sans", sans-serif;
-  padding: 10px 10%;
   color: #333333;
   opacity: 0.8;
-  font-size: 16px;
+  font-size: 20px;
+  padding-bottom: 30px;
+  font-weight: 100;
 }
 
-.velg-blomst-knapp {
-  padding-left: 10%;
-}
-
-.velg-blomst-knapp button {
-  display: flex;
-  background-color: #df8d9c;
+button {
+  background-color: #755175;
   border: none;
   color: white;
   padding: 30px 90px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
 }
 
-/* Background img */
-
-.bg-img {
-  padding: 150px;
-  margin: 150px;
-  background-image: url("C:/Users/fromr/Desktop/Utvikling/Development/Blomsterwerket/resources/images/avrielle-suleiman-iLCMK21AWqE-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-position: 10px;
-  background-size: cover;
-  background-position: center;
-  flex: 1;
-  justify-content: flex-end;
+#utforsk {
+  font-size: 20px;
+  font-family: 'Heebo', sans-serif;;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
+
+.om-oss-container {
+  padding-left: 15%;
+  padding-top: 3%;
+}
+
+
+
