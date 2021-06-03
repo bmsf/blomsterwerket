@@ -12,14 +12,10 @@ body {
 
 /* Grid layout */
 
-
-
-
-
 .search {
   background-color: #FAE1E1;
   border-bottom: 1px solid #dabfba;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -98,11 +94,11 @@ header {
 
 .navbar-title {
   cursor: pointer;
-  color: #333333;
+  color: black;
   font-family: "Frank Ruhl Libre", sans-serif;
   font-weight: 300;
   padding-right: 30px;
-
+  text-align: center;
 }
 
 .nav-links {
@@ -152,7 +148,7 @@ header {
 .toggle-button .bar {
   height: 3px;
   width: 100%;
-  background-color: #333333;
+  background-color: black;
   border-radius: 10px;
 }
 
@@ -164,7 +160,7 @@ header {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-image: url("../resources/images/mainpage.jpeg");
+  background-image: url("../resources/images/mainpage2.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -196,29 +192,18 @@ header {
   padding-top: 5rem;
 }
 
-.om-oss {
-  font-family: "Open Sans", sans-serif;
-  color: #333333;
-  opacity: 0.8;
-  font-size: 20px;
-  font-weight: 100;
-  text-align: center;
-  background: #f4f2f4;
-}
 
 button {
-  background-color: 
-  #5C365C
-  ;
+  background-color:#A87474;
   border: none;
   color: white;
-  padding: 30px 60px;
+  padding: 30px 35px;
   text-align: center;
   justify-content: center;
 }
 
 #utforsk {
-  font-size: 20px;
+  font-size: 22px;
   font-family: 'Heebo', sans-serif;;
   letter-spacing: 2px;
   font-weight: 300;
@@ -228,12 +213,48 @@ button {
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  background-image: url("../resources/images/mainpage.jpeg");
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
+.om-oss-title{
+  font-family: "Frank Ruhl Libre", sans-serif;
+  width: 100%;
+  font-size: 30px;
+  color: black;
+  font-weight: 300;
+  text-align: center;
+  background-color: #f4f2f4;
+  margin-bottom: 0;
+}
+
+.om-oss-title:not(.no-line):after {
+  content: "";
+  margin: 0.5rem auto 2rem auto;
+  max-width: 40px;
+  height: 8px;
+  background-color: #91A885;
+  display: block;
+}
+
+.om-oss {
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  opacity: 0.8;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+  background: #f4f2f4;
+  padding-bottom: 40px;
+}
+
+.om-oss2 {
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  opacity: 0.8;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+  background: #f4f2f4;
+}
 
 
 
@@ -258,13 +279,7 @@ button {
     display: none;
   }
 
-  .search {
-    display: none;
-  }
-
-  .language {
-    display: none;
-  }
+ 
 
 }
 
@@ -280,5 +295,9 @@ button {
     background-color: #f4f2f4;
     width: 100%;
     min-height: 100vh;
+  }
+
+  .search {
+    display: flex;
   }
 }
