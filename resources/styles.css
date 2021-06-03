@@ -11,14 +11,9 @@ body {
 }
 
 /* Grid layout */
-.grid-container {
-  display: grid;
-  grid-template-columns: 120px 5fr;
-  grid-template-rows: 120px 5fr 120px;
-  background-color: #f4f2f4;
-  width: 100%;
-  min-height: 100vh;
-}
+
+
+
 
 
 .search {
@@ -51,6 +46,8 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  height: 100vh;
+  width: 100%;
 }
 
 .navheader {
@@ -87,14 +84,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 15%;
+  padding: 10px 10%;
+  background-color: #97A8A6;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 
 .navbar-title {
   cursor: pointer;
   color: #333333;
   font-family: "Frank Ruhl Libre", sans-serif;
   font-weight: 300;
+  padding-right: 30px;
 
 }
 
@@ -105,6 +112,12 @@ header {
   opacity: 0.8;
 }
 
+.nav-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
 .nav-links li {
   display: inline-block;
   padding: 0px 20px;
@@ -113,11 +126,7 @@ header {
 
 .nav-links li a {
   transition: all 0.3s ease 0s;
-}
-
-.nav-links li a:hover {
-  color: #0088a9;
-  
+  display: block;
 }
 
 .buttons-header {
@@ -129,46 +138,83 @@ header {
   width: 25px;
 }
 
-/* Main Content */
-
-.container-1-main {
-  padding-left: 15%;
-  padding-top: 3%;
+.toggle-button {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
 }
 
-.container-2-main {
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333333;
+  border-radius: 10px;
+}
+
+
+/* Main Content */
+
+.img-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: url("../resources/images/mainpage.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*.container-2-main {
   background-image: url("../resources/images/mainpage3.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 18em;
-  margin-right: 13%;
+  padding: 15em;
+  margin-right: 15%;
   margin-top: 20px;
+  flex-shrink: 5;
 }
+*/
 
 .mainContent h1 {
   font-family: "Frank Ruhl Libre", sans-serif;
-  padding-top: 50px;
-  font-size: 45px;
+  width: 100%;
+  font-size: 30px;
   color: #333333;
   font-weight: 300;
+  text-align: center;
+  background-color: #f4f2f4;
+  opacity: 0.8;
 }
 
-.mainContent h3 {
+.velg-blomst-knapp{
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.om-oss {
   font-family: "Open Sans", sans-serif;
   color: #333333;
   opacity: 0.8;
   font-size: 20px;
-  padding-bottom: 30px;
   font-weight: 100;
+  text-align: center;
+  background: #f4f2f4;
 }
 
 button {
-  background-color: #755175;
+  background-color: 
+  #5C365C
+  ;
   border: none;
   color: white;
-  padding: 30px 90px;
+  padding: 30px 60px;
   text-align: center;
-  font-size: 16px;
+  justify-content: center;
 }
 
 #utforsk {
@@ -179,9 +225,60 @@ button {
 }
 
 .om-oss-container {
-  padding-left: 15%;
-  padding-top: 3%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: url("../resources/images/mainpage.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 
 
+
+
+/* mobile */
+
+@media only screen and (max-width: 480px){
+  
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .buttons-header {
+    display: none;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .language {
+    display: none;
+  }
+
+}
+
+
+/* desktop */ 
+
+@media only screen and (min-width: 1280) {
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 120px 5fr;
+    grid-template-rows: 120px 5fr 120px;
+    background-color: #f4f2f4;
+    width: 100%;
+    min-height: 100vh;
+  }
+}

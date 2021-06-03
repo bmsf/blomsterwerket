@@ -7,6 +7,7 @@
     <title>Blomsterwerket | Råde</title>
     <link rel="stylesheet" href="resources\styles.css">
     <link rel="icon" href="https://www.flaticon.com/svg/vstatic/svg/346/346167.svg?token=exp=1620817846~hmac=c767f610b93b1a30da1b2007f5d26dc5" type="image/icon type">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="grid-container">
@@ -17,9 +18,17 @@
         </div>
 
         <header> 
-            <div class="navbar-title"><h2>Blomsterwerket</h2></div>
-            <nav>
-                <ul class="nav-links">
+            <nav class="navbar">
+                <div class="navbar-title">
+                    <h2>BLOMSTERWERKET</h2>
+                </div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="nav-links">
+                <ul>
                     <li><a href="#"></a>Binderi</li>
                     <li><a href="#"></a>Sesongens varer</li>
                     <li><a href="#"></a>Tøffe planter</li>
@@ -27,15 +36,12 @@
                     <li><a href="#"></a>Begravelse</li>
                     <li><a href="#"></a>Kontakt oss</li>
                 </ul>
+                </div>
             </nav>
 
-            <div class="buttons-header">
-                    <img src="resources\icons\add-to-basket.svg">
-
-                    <img src="resources\icons\user.svg">
-            </div>
-
         </header>
+
+        <!--
         <div class="socials">
             <div class="socials-icon-container">
                 <img class="facebook" src="resources\icons\facebook-app-symbol.svg" alt="Facebook Button">
@@ -43,21 +49,27 @@
                 <img class="instagram" src="resources\icons\instagram.svg" alt="Instagram Button">
             </div> 
         </div>
+        -->
 
         <div class="mainContent">
-            <div class="container-1-main">
+            <div class="img-container">
+                <!--<div class="header-content">
                 <h1>BLOMSTERWERKET</h1>
-                <h3>Fokus på vakkert binderi, sesongens varer, tøffe planter, <br>bryllup og begravelse.</h3>
+                </div>-->
                 <div class="velg-blomst-knapp">
                     <button type="button" id="utforsk">SE UTVALG</button>
                 </div>
+                
             </div>
-
-            <div class="container-2-main"></div>
         </div>
-        
+        <div class="om-oss-container"></div>
+            <div class="om-oss-title">Om oss</div>
+            <div class="om-oss">Vi har fokus på vakkert binderi, sesongens varer, tøffe planter, <br>bryllup og begravelse.</div>
+
+        <!--
         <div class="language"></div>
         <div class="footer"></div>   
+        -->
       </div>
       
 </body>
