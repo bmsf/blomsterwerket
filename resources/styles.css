@@ -82,30 +82,39 @@ header {
   align-items: center;
   padding: 10px 10%;
   background-color: #97A8A6;
+  width: 100%;
+}
+
+.navbar-title {
+  cursor: pointer;
+  color: black;
+  font-size: 15px;
+  font-family: "Frank Ruhl Libre", sans-serif;
+  font-weight: 300;
+  padding-right: 3rem;
+  text-align: center;
+  width: 20%;
+  list-style: none;
+  text-decoration: none;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-
-
-.navbar-title {
-  cursor: pointer;
-  color: black;
-  font-family: "Frank Ruhl Libre", sans-serif;
-  font-weight: 300;
-  padding-right: 30px;
   text-align: center;
 }
+
+
+
+
 
 .nav-links {
   list-style: none;
   color: #333333;
   font-family: "Open Sans", sans-serif;
   opacity: 0.8;
+  width: 80%
 }
 
 .nav-links ul {
@@ -125,14 +134,9 @@ header {
   display: block;
 }
 
-.buttons-header {
-  display: inline-block;
-}
 
-.buttons-header img {
-  height: 25px;
-  width: 25px;
-}
+
+
 
 .toggle-button {
   position: absolute;
@@ -231,7 +235,7 @@ button {
   margin: 0.5rem auto 2rem auto;
   max-width: 40px;
   height: 8px;
-  background-color: #91A885;
+  background-color: #9E96A8;
   display: block;
 }
 
@@ -261,7 +265,7 @@ button {
 
 /* mobile */
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 768px){
   
   .toggle-button {
     display: flex;
@@ -271,17 +275,15 @@ button {
     display: none;
   }
 
-  .buttons-header {
-    display: none;
-  }
+}
 
-  .socials {
-    display: none;
-  }
+/* iPad */
 
- 
+@media only screen and (min-width: 768px){
+  
 
 }
+
 
 
 /* desktop */ 
