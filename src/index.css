@@ -15,7 +15,7 @@ body {
   background-color: #f4f2f4;
 }
 
-.mainContent {
+.App {
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -45,10 +45,10 @@ body {
 .navbar-title {
   cursor: pointer;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Frank Ruhl Libre", sans-serif;
   font-weight: bold;
-  padding: 20px 20px;
+  padding: 20px;
   list-style: none;
   text-decoration: none;
 }
@@ -97,7 +97,7 @@ body {
 
 .toggle-button {
   position: absolute;
-  top: 25px;
+  top: 20px;
   right: 1rem;
   display: flex;
   flex-direction: column;
@@ -151,7 +151,7 @@ body {
   background-image: url("/Users/bmsf/blomsterwerket-react/src/resources/images/mainpage2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 40%;
+  height: 100%;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -234,10 +234,11 @@ button {
   font-family: "Open Sans", sans-serif;
   color: #333333;
   opacity: 0.8;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 100;
   text-align: center;
   background: #f4f2f4;
+  padding: 0px 8%;
 }
 
 .far {
