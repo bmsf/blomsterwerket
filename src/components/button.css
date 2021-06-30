@@ -1,0 +1,46 @@
+:root {
+  --primary: #a87474;
+  --hover: #755151;
+  --danger: #eb3f27;
+  --success: #75fa83;
+  --white: #fdfdfd;
+  --dark: #181717;
+}
+
+.btn {
+  font-family: "Heebo", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.velg-blomst-div {
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background-color: var(--hover);
+}
+
+/* Button style */
+.btn--primary--solid {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+}
+
+/* Button size */
+
+.btn--medium {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.btn--large {
+  padding: 25px 50px;
+  font-size: 20px;
+}

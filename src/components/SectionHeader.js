@@ -1,8 +1,8 @@
-function ContentSections(props) {
+function ContentSections({ title, text }) {
   return (
     <div>
-      <h2 className="titles">{props.title}</h2>
-      <p className="paragraph-text-front-page">{props.text}</p>
+      <h2 className="titles">{title}</h2>
+      <p className="paragraph-text-front-page">{text}</p>
     </div>
   );
 }
