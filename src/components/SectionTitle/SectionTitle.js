@@ -1,4 +1,4 @@
-function ContentSections({ title, text }) {
+function SectionTitle({ title, text }) {
   return (
     <div>
       <h2 className="titles">{title}</h2>
@@ -7,4 +7,4 @@ function ContentSections({ title, text }) {
   );
 }
 
-export default ContentSections;
+export default SectionTitle;
