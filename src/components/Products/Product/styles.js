@@ -1,11 +1,13 @@
 import { CardContent } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
+import "typeface-heebo";
 
 export default makeStyles(() => ({
   root: {
     maxWidth: "100%",
-    fontFamily: "sans-serif",
+  },
+  name: {
+    fontFamily: "Helvetica",
   },
   media: {
     height: 0,
@@ -20,4 +22,9 @@ export default makeStyles(() => ({
     justifyContent: "space-between",
     flexWrap: "wrap",
   },
+  header: {
+    fontFamily: "heebo",
+    fontSize: "30px",
+    fontWeight: "400"
+  }
 }));
