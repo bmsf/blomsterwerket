@@ -13,9 +13,10 @@ import useStyles from "./styles";
 const Product = ({ product, onAddToCart }) => {
   const classes = useStyles();
 
-  console.log(product);
+ 
 
   return (
+    
     <Card className={classes.root}>
       <CardMedia
         className={classes.media}
@@ -42,7 +43,11 @@ const Product = ({ product, onAddToCart }) => {
           aria-label="Add to Cart"
           onClick={() => onAddToCart(product.id, 1)}
         >
-          <AddShoppingCart />
+          <AddShoppingCart
+            className={classes.addToCart}
+            fontSize="medium"
+            color="action"
+          />
         </IconButton>
       </CardActions>
     </Card>

@@ -6,9 +6,6 @@ export default makeStyles(() => ({
   root: {
     maxWidth: "100%",
   },
-  name: {
-    fontFamily: "Helvetica",
-  },
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
@@ -24,7 +21,10 @@ export default makeStyles(() => ({
   },
   header: {
     fontFamily: "heebo",
-    fontSize: "30px",
-    fontWeight: "400"
-  }
+    fontSize: "20px",
+    fontWeight: "400",
+  },
+  addToCart: {
+    color: "#000000",
+  },
 }));

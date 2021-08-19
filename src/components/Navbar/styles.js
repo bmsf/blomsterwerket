@@ -4,12 +4,17 @@ const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
   appBar: {
-    boxShadow: "none",
-    backgroundColor: "#97a8a6",
+    backgroundColor: "#FCAD53",
+    color: "rgb(226, 226, 226)",
     borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
+    },
+    [theme.breakpoints.up("md")]: {
+      boxShadow: "none",
+      borderBottom: "none",
+      color: "#E5DAC3",
     },
   },
   title: {
@@ -17,14 +22,26 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     display: "flex",
     textDecoration: "none",
+    fontFamily: "STIX Two Math",
+    fontSize: "18px",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
   },
   image: {
     marginRight: "10px",
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none",
+    },
+  },
+  socialButton: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "inline",
+      color: "rgb(226, 226, 226)",
     },
   },
   grow: {
@@ -52,6 +69,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    color: "white",
   },
   inputRoot: {
     color: "inherit",
@@ -66,12 +84,39 @@ export default makeStyles((theme) => ({
       width: "20ch",
     },
 
-    // desktop: 
+    // desktop:
     screenSize: {
       [theme.breakpoints.up("sm")]: {
         display: "none",
       },
+    },
+  },
 
-    }
+  // desktop Navbar:
+  desktopNav: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      minHeight: "8vh",
+      width: "50%",
+      paddingRight: "5em",
+    },
+  },
+  navLinks: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "80%",
+    color: "rgb(226, 226, 226)",
+    textDecoration: "none",
+    "& li": {
+      listStyle: "none",
+      textDecoration: "none",
+      letterSpacing: "5px",
+      fontWeight: "bold",
+      fontSize: "16px",
+      cursor: "pointer",
+    },
   },
 }));
