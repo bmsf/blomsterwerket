@@ -28,7 +28,6 @@ export default makeStyles((theme) => ({
     fontSize: "large",
   },
 
-  
   container: {
     scrollSnapType: "y mandatory",
     overflowY: "scroll",
@@ -36,50 +35,54 @@ export default makeStyles((theme) => ({
   },
 
   frontPageHeader: {
-    display: "none",
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
-      fontFamily: "Playfair Display",
-      letterSpacing: "0.2em",
-      color: "rgb(226, 226, 226)",
-      fontSize: "6rem",
-      justifyContent: "center",
-      alignItems: "center",
-      position: "relative",
-      textTransform: "uppercase",
-    },
+    display: "flex",
+    fontFamily: "Playfair Display",
+    letterSpacing: "0.2em",
+    color: "rgb(226, 226, 226)",
+    fontSize: "7vw",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+    textTransform: "uppercase",
   },
 
   one: { display: "flex", flexDirection: "column" },
 
   two: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    paddingRight: "15rem",
-    lineHeight: "-3px",
-  },
+    display: "flex",
+    flexWrap: "nowrap",
 
-  img: {
-    height: "300px",
-    width: "200px",
+    maxWidth: "80%",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "row",
+    },
   },
 
   textContainer: {
     display: "flex",
     flexDirection: "column",
+    flex: "1",
+    justifyContent: "center",
+    paddingLeft: "5rem",
+    width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      width: "80%",
+      paddingLeft: "2rem",
+      alignItems: "center",
+    },
   },
 
   sectionHeader: {
     fontFamily: "Playfair display",
     color: "rgb(226, 226, 226)",
-    fontSize: "25px",
+    fontSize: "2vw",
     fontWeight: "bold",
   },
 
   sectionParagraph: {
     fontFamily: "Lato",
-    fontSize: "19px",
-    lineHeight: "30px",
+    fontSize: "1.2vw",
+    lineHeight: "1.5",
     color: "rgb(226, 226, 226)",
     fontWeight: "300",
   },

@@ -23,7 +23,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     textDecoration: "none",
     fontFamily: "Playfair Display",
-    fontSize: "18px",
+    fontSize: "16px",
     [theme.breakpoints.up("md")]: {
       display: "none",
     },
@@ -97,17 +97,19 @@ export default makeStyles((theme) => ({
     display: "none",
     [theme.breakpoints.up("md")]: {
       display: "flex",
+      flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
       minHeight: "8vh",
-      width: "50%",
-      paddingRight: "5em",
+      width: "60%",
+      paddingRight: "3rem",
+      flexWrap: "wrap",
     },
   },
   navLinks: {
     display: "flex",
     justifyContent: "space-between",
-    width: "80%",
+    width: "100%",
     color: "rgb(226, 226, 226)",
     textDecoration: "none",
     "& li": {
@@ -118,6 +120,11 @@ export default makeStyles((theme) => ({
       fontSize: "16px",
       cursor: "pointer",
       fontFamily: "Playfair Display",
+      borderRadius: theme.shape.borderRadius,
     },
+  },
+  aTags: {
+    color: "rgb(226, 226, 226)",
+    fontFamily: "Playfair Display",
   },
 }));

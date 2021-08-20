@@ -34,8 +34,18 @@ const Navbar = ({ totalItems }) => {
               color="inherit"
             >
               <Menu className={classes.menuButton} />
-              <Facebook className={classes.socialButton} />
-              <Instagram className={classes.socialButton} />
+              <Facebook
+                className={classes.socialButton}
+                target="_blank"
+                href="https://www.facebook.com/pages/category/Florist/Blomster-Werket-103013615165959/"
+              />
+            </IconButton>
+            <IconButton aria-label="Instagram button">
+              <Instagram
+                className={classes.socialButton}
+                target="_blank"
+                href="https://www.instagram.com/blomsterwerket/s"
+              />
             </IconButton>
           </div>
           <div className={classes.grow} />
@@ -43,16 +53,24 @@ const Navbar = ({ totalItems }) => {
           <nav className={classes.desktopNav}>
             <ul className={classes.navLinks}>
               <li>
-                <a href="#" className={classes.aTags}></a>Home
+                <Link to="/" className={classes.aTags}>
+                  Home
+                </Link>
               </li>
               <li>
-                <a href="#"></a>Shop
+                <Link to="/shop" className={classes.aTags}>
+                  Nettbutikk
+                </Link>
               </li>
               <li>
-                <a href="#"></a>New
+                <Link to="/nyheter" className={classes.aTags}>
+                  Blomsterbinderi
+                </Link>
               </li>
               <li>
-                <a href="#"></a>About
+                <Link to="" className={classes.aTags}>
+                  Levering & Sending
+                </Link>
               </li>
             </ul>
           </nav>

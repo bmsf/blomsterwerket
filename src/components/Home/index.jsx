@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import image from "../../assets/mainpage4.jpeg";
+import image from "../../assets/mainpage.jpeg";
 import "../../index.css";
 
 import useStyles from "./styles";
@@ -26,13 +26,17 @@ const Home = () => {
           </a>
         </section>
 
-        <section
-          id="middle"
-          className={classes.two}
-          data-aos="fade"
-          data-aos-duration="3000"
-        >
-          <img></img>
+        <section id="middle" className={classes.two}>
+          <div className={classes.textContainer}>
+            <img
+              style={{
+                width: "80%",
+                maxHeight: "100%",
+                objectFit: "fit",
+              }}
+              src={image}
+            ></img>
+          </div>
           <div className={classes.textContainer}>
             <h3 className={classes.sectionHeader}>
               Blomster Werket er et lite blomster-verksted i Råde med fokus på
