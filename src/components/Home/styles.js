@@ -11,6 +11,24 @@ export default makeStyles((theme) => ({
     flexGrow: 1,
   },
 
+  scrollWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    fontFamily: "Lato",
+    color: "rgb(226, 226, 226)",
+    fontSize: "25px",
+    paddingTop: "5rem",
+    cursor: "pointer",
+  },
+
+  scrollArrow: {
+    animation: "pulse 2s infinite",
+    fontSize: "large",
+  },
+
+  
   container: {
     scrollSnapType: "y mandatory",
     overflowY: "scroll",
@@ -21,15 +39,18 @@ export default makeStyles((theme) => ({
     display: "none",
     [theme.breakpoints.up("md")]: {
       display: "flex",
-      fontFamily: "Montserrat",
+      fontFamily: "Playfair Display",
       letterSpacing: "0.2em",
       color: "rgb(226, 226, 226)",
-      fontSize: "7rem",
+      fontSize: "6rem",
       justifyContent: "center",
       alignItems: "center",
       position: "relative",
+      textTransform: "uppercase",
     },
   },
+
+  one: { display: "flex", flexDirection: "column" },
 
   two: {
     display: "grid",
@@ -49,14 +70,16 @@ export default makeStyles((theme) => ({
   },
 
   sectionHeader: {
-    fontFamily: "Frank ruhl Libre",
+    fontFamily: "Playfair display",
     color: "rgb(226, 226, 226)",
     fontSize: "25px",
     fontWeight: "bold",
   },
 
   sectionParagraph: {
-    fontFamily: "Frank ruhl Libre",
+    fontFamily: "Lato",
+    fontSize: "19px",
+    lineHeight: "30px",
     color: "rgb(226, 226, 226)",
     fontWeight: "300",
   },

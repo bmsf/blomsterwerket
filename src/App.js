@@ -3,12 +3,14 @@ import Cart from "./components/Cart/index";
 import Header from "./components/Header/index";
 import Navbar from "./components/Navbar/index";
 import Products from "./components/Products/index";
-import SectionTitle from "./components/SectionTitle/index";
 import Checkout from "./components/CheckoutForm/Checkout/index";
 
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import FrontPage from "./components/FrontPage";
+import Home from "./components/Home";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -53,11 +55,16 @@ const App = () => {
     fetchCart();
   }, []);
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <Router>
       <div className="app">
         <Navbar totalItems={cart.total_items} />
-        <FrontPage />
+        <Home />
         {/* <Switch>
           <Route exact path="/">
             <Products products={products} onAddToCart={handleAddToCart} />

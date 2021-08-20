@@ -1,4 +1,3 @@
-import { Button } from "../Button/index";
 import { Link } from "react-router-dom";
 import useStyles from "./styles";
 

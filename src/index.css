@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Open+Sans&family=Taviraj:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amiri&family=BioRhyme:wght@200&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Open+Sans&family=Taviraj:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri&family=BioRhyme:wght@200&display=swap"); */
+/* New font combination*/
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap");
+
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,6 +22,35 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-
   scroll-snap-align: start;
+}
+
+a {
+  text-decoration: none;
+}
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
 }

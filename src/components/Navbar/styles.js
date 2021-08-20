@@ -22,7 +22,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     display: "flex",
     textDecoration: "none",
-    fontFamily: "STIX Two Math",
+    fontFamily: "Playfair Display",
     fontSize: "18px",
     [theme.breakpoints.up("md")]: {
       display: "none",
@@ -117,6 +117,7 @@ export default makeStyles((theme) => ({
       fontWeight: "bold",
       fontSize: "16px",
       cursor: "pointer",
+      fontFamily: "Playfair Display",
     },
   },
 }));

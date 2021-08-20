@@ -1,18 +1,13 @@
 import React, { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import image from "../../assets/mainpage4.jpeg";
 import "../../index.css";
 
 import useStyles from "./styles";
 
-const FrontPage = () => {
+const Home = () => {
   const classes = useStyles();
-
-  useEffect(() => {
-    Aos.init();
-  }, []);
 
   return (
     <main>
@@ -20,19 +15,25 @@ const FrontPage = () => {
         <section
           className={classes.one}
           data-aos="fade"
-          data-aos-duration="2000"
+          data-aos-duration="3000"
         >
           <h1 className={classes.frontPageHeader}>Blomster Werket</h1>
+          <a href="#middle">
+            <div className={classes.scrollWrapper}>
+              Scroll
+              <ExpandMoreIcon className="arrow bounce" />
+            </div>
+          </a>
         </section>
-        <section className={classes.two} data-aos="fade-up">
-          <img className={classes.img}></img>
-          <div
-            className={classes.textContainer}
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0"
-          >
+
+        <section
+          id="middle"
+          className={classes.two}
+          data-aos="fade"
+          data-aos-duration="3000"
+        >
+          <img></img>
+          <div className={classes.textContainer}>
             <h3 className={classes.sectionHeader}>
               Blomster Werket er et lite blomster-verksted i Råde med fokus på
               det lille ekstra! Vi brenner for vakkert binderi, godt utvalg av
@@ -56,4 +57,4 @@ const FrontPage = () => {
     </main>
   );
 };
-export default FrontPage;
+export default Home;
