@@ -2,81 +2,72 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
-  },
+
   root: {
     flexGrow: 1,
   },
-
-  scrollWrapper: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    fontFamily: "Lato",
-    color: "rgb(226, 226, 226)",
-    fontSize: "25px",
-    paddingTop: "5rem",
-    cursor: "pointer",
-  },
-
-  scrollArrow: {
-    animation: "pulse 2s infinite",
-    fontSize: "large",
-  },
-
-  container: {
-    scrollSnapType: "y mandatory",
-    overflowY: "scroll",
+  main: {
+    backgroundColor: "#fce5ce",
+    margin: "0",
+    padding: "0",
+    width: "100%",
     height: "100vh",
   },
 
-  frontPageHeader: {
+  wrapper: {
+    maxWidth: "2000px",
+    paddingTop: "20px",
+    [theme.breakpoints.up("md")]: {
+      padding: "50px",
+    },
+  },
+
+  topTextDiv: {
+    top: "10%",
     display: "flex",
-    fontFamily: "Playfair Display",
-    letterSpacing: "0.2em",
-    color: "rgb(226, 226, 226)",
-    fontSize: "7vw",
-    justifyContent: "center",
+    flexDirection: "column",
     alignItems: "center",
+    textAlign: "center",
+    position: "absolute",
+    [theme.breakpoints.down("md")]: {},
+  },
+
+  topCategoryHeader: {
+    margin: "5px",
+    paddingLeft: theme.spacing(5),
+    alignSelf: "flex-start",
+    fontFamily: "Playfair Display",
+    color: "rgb(226, 226, 226)",
+    fontSize: "1.5rem",
     position: "relative",
     textTransform: "uppercase",
   },
-
-  one: { display: "flex", flexDirection: "column" },
-
-  two: {
-    display: "flex",
-    flexWrap: "nowrap",
-
-    maxWidth: "80%",
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "row",
-    },
+  topSubHeader: {
+    margin: "5px",
+    paddingLeft: theme.spacing(5),
+    paddingBottom: theme.spacing(1),
+    fontFamily: "Lato",
+    fontSize: "16px",
+    lineHeight: "1.5",
+    color: "rgb(226, 226, 226)",
+    fontWeight: "300",
+    alignSelf: "flex-start",
+    [theme.breakpoints.down("md")]: {},
   },
+  topButton: {
+    right: "14%",
+    backgroundColor: "#FFFFFF",
+    fontFamily: "Lato",
+  },
+  // Cards
 
-  textContainer: {
+  gridItem: {
     display: "flex",
     flexDirection: "column",
-    flex: "1",
-    justifyContent: "center",
-    paddingLeft: "5rem",
-    width: "100%",
-    [theme.breakpoints.down("sm")]: {
-      width: "80%",
-      paddingLeft: "2rem",
-      alignItems: "center",
-    },
-  },
-
-  sectionHeader: {
-    fontFamily: "Playfair display",
-    color: "rgb(226, 226, 226)",
-    fontSize: "2vw",
-    fontWeight: "bold",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    textAlign: "center",
+    position: "relative",
   },
 
   sectionParagraph: {
@@ -85,5 +76,122 @@ export default makeStyles((theme) => ({
     lineHeight: "1.5",
     color: "rgb(226, 226, 226)",
     fontWeight: "300",
+  },
+
+  binderi: { position: "relative" },
+  binderiImg: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+  },
+  textDiv: {
+    display: "flex",
+    flexDirection: "column",
+
+    alignItems: "center",
+    textAlign: "center",
+    position: "absolute",
+    [theme.breakpoints.down("md")]: {},
+  },
+
+  topLandscapeContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    position: "relative",
+    paddingBottom: "20px",
+    maxHeight: "174px",
+    [theme.breakpoints.up("lg")]: {
+      minHeight: "165px",
+    },
+  },
+
+  //Big card on front page
+  mainCategoryHeader: {
+    margin: "0",
+    fontFamily: "Playfair Display",
+    letterSpacing: "0.1em",
+    color: "rgb(226, 226, 226)",
+    fontSize: "1.5rem",
+    position: "relative",
+    textTransform: "uppercase",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "3vh",
+    },
+  },
+
+  subHeader: {
+    paddingTop: "20px",
+    paddingBottom: theme.spacing(2),
+    fontFamily: "Lato",
+    fontSize: "16px",
+    lineHeight: "1.5",
+    color: "rgb(226, 226, 226)",
+    fontWeight: "300",
+    paddingTop: "10px",
+    [theme.breakpoints.down("md")]: {},
+  },
+
+  buttonMain: {
+    bottom: "15%",
+    backgroundColor: "#A8C6CA",
+    fontFamily: "Lato",
+  },
+
+  largeCategoryContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    position: "relative",
+    [theme.breakpoints.up("xs")]: {
+      maxHeight: "207px",
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: theme.spacing(2),
+      maxHeight: "545px",
+    },
+  },
+  plantImg: {
+    objectFit: "cover",
+    width: "100%",
+    height: "100%",
+    filter: "blur(1px)",
+  },
+
+  //Small card on frontpage
+  smallCardHeader: {
+    fontFamily: "Lato",
+    fontSize: "16px",
+    textTransform: "uppercase",
+    paddingTop: "20px",
+  },
+  smallMainHeader: {
+    fontFamily: "Playfair Display",
+    fontSize: "40px",
+    fontWeight: "bold",
+    flexWrap: "wrap",
+    [theme.breakpoints.up("lg")]: {},
+  },
+  smallCardParagraph: {
+    fontFamily: "Lato",
+    [theme.breakpoints.up("lg")]: {},
+  },
+  buttonSmallCard: {},
+  smallCategoriesContainer: {
+    [theme.breakpoints.up("xs")]: {
+      paddingBottom: "20px",
+      maxHeight: "227px",
+    },
+    [theme.breakpoints.up("md")]: {
+      maxHeight: "381px",
+    },
+  },
+  smallCategoriesImg: {
+    height: "100%",
+    width: "100%",
+    objectFit: "cover",
   },
 }));

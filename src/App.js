@@ -11,6 +11,7 @@ import Home from "./components/Home";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import OutlinedCard from "./components/Card/OutlinedCard";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -53,9 +54,6 @@ const App = () => {
   useEffect(() => {
     fetchProducts();
     fetchCart();
-  }, []);
-
-  useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
@@ -83,32 +81,6 @@ const App = () => {
             <Checkout cart={cart} />
           </Route>
         </Switch>
-
-        {/* <Switch>
-          <Route exact path="/">
-            <Products products={products} onAddToCart={handleAddToCart} />
-            <SectionTitle
-              title="Om oss"
-              text="Blomster Werket er et lite blomster-verksted i Råde med fokus på det
-            lille ekstra! Vi brenner for vakkert binderi, godt utvalg av tøffe planter,
-            sesongens varer, bryllup og sorgbinderi! Åpningstidene våre er: Torsdager 10-18, Fredager 10-18, Lørdager 10-15 Adresse: Ekornveien 4, 1640
-            Råde (parker inne på gårdsplassen)"
-            />
-            <h2 className="titles">Nyheter</h2>
-          </Route>
-          <Route exact path="/cart">
-            <Cart
-              cart={cart}
-              handleUpdateCartQty={handleUpdateCartQty}
-              handleRemoveFromCart={handleRemoveFromCart}
-              handleEmptyCart={handleEmptyCart}
-            />
-            <SectionTitle />
-          </Route>
-          <Route exact path="/checkout">
-            <Checkout cart={cart} />
-          </Route>
-        </Switch> */}
       </div>
     </Router>
   );

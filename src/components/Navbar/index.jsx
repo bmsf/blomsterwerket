@@ -13,6 +13,7 @@ import {
   Search,
   Facebook,
   Instagram,
+  LocalMallSharp,
 } from "@material-ui/icons";
 import { Link, useLocation } from "react-router-dom";
 
@@ -93,7 +94,7 @@ const Navbar = ({ totalItems }) => {
                 color="inherit"
               >
                 <Badge badgeContent={totalItems} color="secondary">
-                  <ShoppingCart />
+                  <LocalMallSharp />
                 </Badge>
               </IconButton>
             </div>

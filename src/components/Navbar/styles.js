@@ -4,8 +4,8 @@ const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
   appBar: {
-    backgroundColor: "#FCAD53",
-    color: "rgb(226, 226, 226)",
+    backgroundColor: "#FCE5CE",
+    color: "#0A1F11",
     borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -14,7 +14,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       boxShadow: "none",
       borderBottom: "none",
-      color: "#E5DAC3",
+      color: "#0A1F11",
     },
   },
   title: {
@@ -41,7 +41,7 @@ export default makeStyles((theme) => ({
     display: "none",
     [theme.breakpoints.up("md")]: {
       display: "inline",
-      color: "rgb(226, 226, 226)",
+      color: "#0A1F11",
     },
   },
   grow: {
@@ -84,7 +84,6 @@ export default makeStyles((theme) => ({
       width: "20ch",
     },
 
-    // desktop:
     screenSize: {
       [theme.breakpoints.up("sm")]: {
         display: "none",
@@ -101,8 +100,8 @@ export default makeStyles((theme) => ({
       justifyContent: "space-between",
       alignItems: "center",
       minHeight: "8vh",
-      width: "60%",
-      paddingRight: "3rem",
+      width: "55%",
+      paddingRight: "5rem",
       flexWrap: "wrap",
     },
   },
@@ -110,21 +109,20 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
-    color: "rgb(226, 226, 226)",
+    color: "#0A1F11",
     textDecoration: "none",
     "& li": {
       listStyle: "none",
       textDecoration: "none",
-      letterSpacing: "5px",
+
       fontWeight: "bold",
-      fontSize: "16px",
       cursor: "pointer",
-      fontFamily: "Playfair Display",
+      fontFamily: "Work Sans",
       borderRadius: theme.shape.borderRadius,
     },
   },
   aTags: {
-    color: "rgb(226, 226, 226)",
-    fontFamily: "Playfair Display",
+    color: "#0A1F11",
+    fontFamily: "Lato",
   },
 }));
