@@ -30,8 +30,8 @@ const Product = ({ product, onAddToCart }) => {
           </Typography>
         </div>
         <Typography
+          className={classes.bodyText}
           dangerouslySetInnerHTML={{ __html: product.description }}
-          variant="body2"
           color="textSecondary"
         />
       </CardContent>

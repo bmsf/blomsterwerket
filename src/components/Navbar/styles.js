@@ -7,6 +7,7 @@ export default makeStyles((theme) => ({
     backgroundColor: "#FCE5CE",
     color: "#0A1F11",
     borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
+    zIndex: 1,
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,

@@ -5,6 +5,7 @@ import "typeface-heebo";
 export default makeStyles(() => ({
   root: {
     maxWidth: "100%",
+    backgroundColor: "#FFFFF",
   },
   media: {
     height: 0,
@@ -20,11 +21,15 @@ export default makeStyles(() => ({
     flexWrap: "wrap",
   },
   header: {
-    fontFamily: "heebo",
-    fontSize: "20px",
+    fontFamily: "Playfair Display",
+    fontSize: "24px",
     fontWeight: "400",
   },
   addToCart: {
     color: "#000000",
+  },
+  bodyText: {
+    fontFamily: "Lato",
+    fontSize: "16px",
   },
 }));

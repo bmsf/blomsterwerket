@@ -17,7 +17,12 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <main className={classes.main} className={classes.root}>
+    <main
+      className={classes.main}
+      className={classes.root}
+      data-aos-easing="ease"
+      data-aos-duration="600"
+    >
       <div className={classes.toolbar} />
       <Container className={classes.wrapper}>
         <Grid container direction="row">
@@ -37,6 +42,9 @@ const Home = () => {
               lg={12}
               xl={12}
               className={classes.topLandscapeContainer}
+              data-aos="fade-right"
+              data-aos-easing="ease-in"
+              data-aos-duration="600"
             >
               <img src={plant} className={classes.binderiImg} />
               <div className={classes.topTextDiv}>
@@ -49,7 +57,7 @@ const Home = () => {
                 </Button>
               </div>
             </Grid>
-            <Grid item xs={12} container spacing={0}>
+            <Grid item xs={12} container>
               <Grid
                 item
                 xs={6}
@@ -59,8 +67,28 @@ const Home = () => {
                 xl={6}
                 className={classes.smallCategoriesContainer}
                 style={{ paddingRight: "10px" }}
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="300"
+                data-aos-easing="ease-in-quad"
               >
                 <img src={binderi} className={classes.smallCategoriesImg} />
+                <div className={classes.textDiv}>
+                  <h2 className={classes.mainCategoryHeader}>
+                    Blomster til bryllup
+                  </h2>
+                  <p className={classes.subHeader}>
+                    Velkommen til Blomster Werket!
+                  </p>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    size="large"
+                    className={classes.buttonMain}
+                  >
+                    Se Utvalg
+                  </Button>
+                </div>
               </Grid>
               <Grid
                 item
@@ -71,8 +99,28 @@ const Home = () => {
                 xl={6}
                 className={classes.smallCategoriesContainer}
                 style={{ paddingLeft: "10px" }}
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="600"
+                data-aos-easing="ease-in-quad"
               >
                 <img src={image} className={classes.smallCategoriesImg} />
+                <div className={classes.textDiv}>
+                  <h2 className={classes.mainCategoryHeader}>
+                    Blomster til bryllup
+                  </h2>
+                  <p className={classes.subHeader}>
+                    Velkommen til Blomster Werket!
+                  </p>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    size="large"
+                    className={classes.buttonMain}
+                  >
+                    Se Utvalg
+                  </Button>
+                </div>
               </Grid>
             </Grid>
           </Grid>
@@ -85,6 +133,10 @@ const Home = () => {
               lg={12}
               xl={8}
               className={classes.largeCategoryContainer}
+              data-aos="fade-left"
+              data-aos-offset="500"
+              data-aos-duration="600"
+              data-aos-delay="900"
             >
               <img src={wedding} className={classes.plantImg} />
               <div className={classes.textDiv}>

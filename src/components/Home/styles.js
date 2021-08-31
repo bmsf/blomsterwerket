@@ -87,7 +87,6 @@ export default makeStyles((theme) => ({
   textDiv: {
     display: "flex",
     flexDirection: "column",
-
     alignItems: "center",
     textAlign: "center",
     position: "absolute",
@@ -111,14 +110,10 @@ export default makeStyles((theme) => ({
   mainCategoryHeader: {
     margin: "0",
     fontFamily: "Playfair Display",
-    letterSpacing: "0.1em",
     color: "rgb(226, 226, 226)",
     fontSize: "1.5rem",
     position: "relative",
     textTransform: "uppercase",
-    [theme.breakpoints.down("md")]: {
-      fontSize: "3vh",
-    },
   },
 
   subHeader: {
@@ -158,7 +153,7 @@ export default makeStyles((theme) => ({
     objectFit: "cover",
     width: "100%",
     height: "100%",
-    filter: "blur(1px)",
+    filter: "blur(5px)",
   },
 
   //Small card on frontpage
@@ -179,8 +174,14 @@ export default makeStyles((theme) => ({
     fontFamily: "Lato",
     [theme.breakpoints.up("lg")]: {},
   },
-  buttonSmallCard: {},
+
   smallCategoriesContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    position: "relative",
     [theme.breakpoints.up("xs")]: {
       paddingBottom: "20px",
       maxHeight: "227px",
@@ -193,5 +194,6 @@ export default makeStyles((theme) => ({
     height: "100%",
     width: "100%",
     objectFit: "cover",
+    filter: "blur(2px)",
   },
 }));

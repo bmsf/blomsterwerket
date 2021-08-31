@@ -1,6 +1,5 @@
 {
   "name": "blomsterwerket-react",
-  "homepage": "https://bmsf.github.io/blomsterwerket/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

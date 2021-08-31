@@ -69,8 +69,8 @@ const Navbar = ({ totalItems }) => {
                 </Link>
               </li>
               <li>
-                <Link to="" className={classes.aTags}>
-                  Levering & Sending
+                <Link to="/svar" className={classes.aTags}>
+                  Ofte stilte spørsmål
                 </Link>
               </li>
             </ul>
@@ -85,20 +85,19 @@ const Navbar = ({ totalItems }) => {
               <Search className={classes.searchBar} />
             </IconButton>
           </div>
-          {location.pathname === "/" && (
-            <div className={classes.button}>
-              <IconButton
-                component={Link}
-                to="/cart"
-                aria-label="Show cart items"
-                color="inherit"
-              >
-                <Badge badgeContent={totalItems} color="secondary">
-                  <LocalMallSharp />
-                </Badge>
-              </IconButton>
-            </div>
-          )}
+
+          <div className={classes.button}>
+            <IconButton
+              component={Link}
+              to="/cart"
+              aria-label="Show cart items"
+              color="inherit"
+            >
+              <Badge badgeContent={totalItems} color="secondary">
+                <LocalMallSharp />
+              </Badge>
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
     </>

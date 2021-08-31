@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Cart from "./components/Cart/index";
-import Header from "./components/Header/index";
 import Navbar from "./components/Navbar/index";
 import Products from "./components/Products/index";
 import Checkout from "./components/CheckoutForm/Checkout/index";
@@ -8,10 +7,10 @@ import Checkout from "./components/CheckoutForm/Checkout/index";
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
+import Svar from "./components/Svar";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import OutlinedCard from "./components/Card/OutlinedCard";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -55,7 +54,6 @@ const App = () => {
     fetchProducts();
     fetchCart();
     AOS.init();
-    AOS.refresh();
   }, []);
 
   return (
@@ -68,6 +66,9 @@ const App = () => {
           </Route>
           <Route exact path="/shop">
             <Products products={products} onAddToCart={handleAddToCart} />
+          </Route>
+          <Route exact path="/svar">
+            <Svar />
           </Route>
           <Route exact path="/cart">
             <Cart
