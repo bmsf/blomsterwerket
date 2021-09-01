@@ -63,8 +63,7 @@ const Cart = ({
             <a
               className={classes.emptyButton}
               type="button"
-              onClick={handleEmptyCart}
-              href=""
+              href={handleEmptyCart}
             >
               Tøm handlekurv
             </a>
