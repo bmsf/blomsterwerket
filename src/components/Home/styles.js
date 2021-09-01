@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     flexGrow: 1,
   },
   main: {
-    backgroundColor: "#fce5ce",
+    backgroundColor: "#feefe9",
     margin: "0",
     padding: "0",
     width: "100%",
