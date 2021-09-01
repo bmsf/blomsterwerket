@@ -3,7 +3,6 @@ import useStyles from "./styles";
 
 import butikk from "../../assets/wedding3.jpeg";
 
-
 const Svar = () => {
   const classes = useStyles();
 
@@ -12,7 +11,11 @@ const Svar = () => {
       <div className={classes.toolbar} />
       <div className={classes.wrapper}>
         <section className={classes.topSection}>
-          <img src={butikk} className={classes.leftTopSection} />
+          <img
+            src={butikk}
+            alt="forsidebutikk"
+            className={classes.leftTopSection}
+          />
           <div className={classes.rightTopSection}>
             <h2 className={classes.topCategoryHeader}>
               Hva er åpningstidene deres?
@@ -31,7 +34,6 @@ const Svar = () => {
             </p>
           </div>
         </section>
-        
       </div>
     </main>
   );
