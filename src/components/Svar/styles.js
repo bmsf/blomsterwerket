@@ -32,8 +32,11 @@ export default makeStyles((theme) => ({
 
   topSection: {
     display: "flex",
+    justifyContent: "space-between",
+    alignContent: "stretch",
+    alignItems: "stretch",
     width: "100%",
-    height: "70vh",
+    height: "60vh",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
@@ -55,13 +58,14 @@ export default makeStyles((theme) => ({
 
   leftTopSection: {
     height: "100%",
-    width: "40%",
+    width: "50%",
+    objectFit: "contain",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
   },
   rightTopSection: {
-    width: "60%",
+    width: "80%",
     height: "100%",
     backgroundColor: "rgb(37, 68, 55)",
     display: "flex",
@@ -71,62 +75,11 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
+      padding: theme.spacing(1),
     },
   },
 
   //Bottom section
 
-  bottomSection: {
-    display: "flex",
-    width: "100%",
-    backgroundColor: "#AFCECC",
-    margin: "0",
-  },
-
-  bottomSectionHeader: {
-    paddingTop: theme.spacing(10),
-    fontFamily: "Playfair Display",
-    color: "#435E53",
-    position: "relative",
-    textTransform: "uppercase",
-    fontSize: "45px",
-    width: "100%",
-    selfAlign: "flex-start",
-    right: "50%",
-    margin: "0",
-  },
-  lowerBottomSectionHeader: {
-    fontFamily: "Playfair Display",
-    color: "#435E53",
-    position: "relative",
-    textTransform: "uppercase",
-    fontSize: "45px",
-    width: "100%",
-    selfAlign: "flex-start",
-    margin: "0",
-    right: "30%",
-  },
-
-  pBottom: {
-    position: "relative",
-    fontFamily: "Lato",
-    color: "#435E53",
-    width: "60%",
-    fontSize: "18px",
-    left: "1%",
-  },
-
-  rightBottomSection: {
-    width: "40%",
-    height: "70%",
-    objectFit: "contain",
-  },
-  leftBottomSection: {
-    height: "100%",
-    width: "60%",
-    display: "flex",
-    flexDirection: "column",
-    alignContent: "center",
-    alignItems: "center",
-  },
+  
 }));

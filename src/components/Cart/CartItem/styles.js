@@ -1,18 +1,38 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
   media: {
-    height: 260,
+    width: 260,
+    objectFit: "contain",
+  },
+  cartCard: {
+    display: "flex",
+    justifyContent: "space-between",
+    minHeight: "150px",
+    backgroundColor: "#feefe9",
   },
   cardContent: {
     display: "flex",
-    justifyContent: "space-between",
+    alignItems: "center",
   },
-  cartActions: {
+  cardActions: {
     justifyContent: "space-between",
+    fontFamily: "Playfair display",
+    padding: theme.spacing(2),
   },
   buttons: {
     display: "flex",
     alignItems: "center",
+    padding: theme.spacing(2),
+  },
+
+  itemName: {
+    fontFamily: "Playfair display",
+    fontSize: "20px",
+    padding: theme.spacing(3),
+  },
+  removeItemButton: {
+    fontFamily: "Lato",
+    fontWeight: "bold",
   },
 }));

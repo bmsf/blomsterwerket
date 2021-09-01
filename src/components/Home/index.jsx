@@ -2,13 +2,11 @@ import React from "react";
 import { Grid, Container, Button } from "@material-ui/core";
 
 import image from "../../assets/mainpage.jpeg";
-import image2 from "../../assets/mainpage768px.jpg";
 import wedding from "../../assets/wedding.jpeg";
-import wedding2 from "../../assets/wedding2.jpeg";
-import wedding3 from "../../assets/wedding3.jpeg";
 import plant from "../../assets/plant4.jpg";
-import plantportrait from "../../assets/plantportrait.jpeg";
 import binderi from "../../assets/blomsterbinderi.jpeg";
+import omoss from "../../assets/omoss.jpeg";
+
 import "../../index.css";
 
 import useStyles from "./styles";
@@ -17,12 +15,7 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <main
-      className={classes.main}
-      className={classes.root}
-      data-aos-easing="ease"
-      data-aos-duration="600"
-    >
+    <main className={classes.main} className={classes.root}>
       <div className={classes.toolbar} />
       <Container className={classes.wrapper}>
         <Grid container direction="row">
@@ -159,6 +152,33 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
+      <section
+        className={classes.bottomSection}
+        data-aos="fade-up"
+        data-aos-easing="ease-in"
+        data-aos-duration="600"
+      >
+        <div className={classes.leftBottomSection}>
+          <h1 className={classes.bottomSectionHeader}>Vi lager</h1>
+          <div>
+            <h1 className={classes.lowerBottomSectionHeader}>det vi elsker</h1>
+
+            <p className={classes.pBottom}>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </div>
+        </div>
+        <img src={omoss} className={classes.rightBottomSection} />
+      </section>
     </main>
   );
 };

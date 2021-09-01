@@ -4,7 +4,7 @@ const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
   appBar: {
-    backgroundColor: "#FCE5CE",
+    backgroundColor: "#FEEFE9",
     color: "#0A1F11",
     borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
     zIndex: 1,
@@ -29,9 +29,7 @@ export default makeStyles((theme) => ({
       display: "none",
     },
   },
-  image: {
-    marginRight: "10px",
-  },
+
   menuButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up("md")]: {
@@ -102,7 +100,7 @@ export default makeStyles((theme) => ({
       alignItems: "center",
       minHeight: "8vh",
       width: "55%",
-      paddingRight: "5rem",
+      paddingRight: "3rem",
       flexWrap: "wrap",
     },
   },
@@ -115,7 +113,6 @@ export default makeStyles((theme) => ({
     "& li": {
       listStyle: "none",
       textDecoration: "none",
-
       fontWeight: "bold",
       cursor: "pointer",
       fontFamily: "Work Sans",

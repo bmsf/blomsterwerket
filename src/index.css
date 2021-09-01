@@ -1,8 +1,5 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400&family=Open+Sans&family=Taviraj:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amiri&family=BioRhyme:wght@200&display=swap"); */
-/* New font combination*/
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
 
 * {
   box-sizing: border-box;
@@ -11,13 +8,13 @@
 }
 
 .app {
-  background-color: #fce5ce;
+  background-color: #feefe9;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #fce5ce;
+  background-color: #feefe9;
   width: 100%;
   scroll-snap-type: y mandatory;
 }
@@ -27,12 +24,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
 }
 
 a {
   text-decoration: none;
 }
-
-
-

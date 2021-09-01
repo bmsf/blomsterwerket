@@ -1,29 +1,94 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   title: {
-    marginTop: '5%',
+    fontFamily: "Playfair display",
+    fontSize: "24px",
+    paddingLeft: "10px",
   },
-  emptyButton: {
-    minWidth: '150px',
-    [theme.breakpoints.down('xs')]: {
-      marginBottom: '5px',
+
+  infoTitle: {
+    fontFamily: "Lato",
+  },
+
+  cartButtonRow: {
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    paddingBottom: theme.spacing(5),
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+
+  cartHeader: {
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    paddingBottom: theme.spacing(1),
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+  },
+  keepShoppingButton: {
+    backgroundColor: "#D1D6FF",
+    fontFamily: "Lato",
+    fontWeight: "bold",
+    minWidth: "200px",
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: "5px",
     },
-    [theme.breakpoints.up('xs')]: {
-      marginRight: '20px',
+    [theme.breakpoints.up("xs")]: {
+      marginRight: "20px",
     },
   },
   checkoutButton: {
-    minWidth: '150px',
+    minWidth: "200px",
+    backgroundColor: "#9B9EB3",
+    fontFamily: "Lato",
+    fontWeight: "bold",
   },
-  link: {
-    textDecoration: 'none',
+  emptyButton: {
+    textDecoration: "underline",
+    cursor: "pointer",
+    fontFamily: "Lato",
   },
   cardDetails: {
-    display: 'flex',
-    marginTop: '10%',
-    width: '100%',
-    justifyContent: 'space-between',
+    display: "flex",
+    flexDirection: "column",
+    marginTop: "3%",
+    width: "100%",
+    justifyContent: "space-between",
+  },
+  subHeader: {
+    display: "flex",
+    justifyContent: "flex-end",
+    padding: "5px",
+  },
+
+  subHeaderTextAntall: {
+    fontFamily: "Lato",
+    fontSize: "14px",
+    paddingLeft: "50px",
+    paddingRight: "315px",
+  },
+
+  subHeaderTextPris: {
+    fontFamily: "Lato",
+    fontSize: "14px",
+    paddingLeft: "50px",
+    paddingRight: "70px",
+  },
+  subHeaderText: {
+    fontFamily: "Lato",
+    fontSize: "14px",
+    paddingLeft: "50px",
+    paddingRight: "30px",
+  },
+  totalSum: {
+    fontFamily: "Playfair display",
+    fontSize: "24px",
+    alignSelf: "flex-end",
+    padding: theme.spacing(3),
   },
 }));

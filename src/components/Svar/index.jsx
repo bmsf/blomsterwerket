@@ -1,8 +1,8 @@
 import React from "react";
 import useStyles from "./styles";
 
-import butikk from "../../assets/svar3.jpeg";
-import omoss from "../../assets/omoss.jpeg";
+import butikk from "../../assets/wedding3.jpeg";
+
 
 const Svar = () => {
   const classes = useStyles();
@@ -29,33 +29,9 @@ const Svar = () => {
             <p className={classes.p}>
               Bestillingen din kan du hente når som helst i åpningstiden vår!
             </p>
-            <h2 className={classes.topCategoryHeader}>Leverer dere?</h2>
-            <p className={classes.p}>Ja vi leverer</p>
           </div>
         </section>
-        <section className={classes.bottomSection}>
-          <div className={classes.leftBottomSection}>
-            <div className={classes.title}>
-              <h1 className={classes.bottomSectionHeader}>Vi lager</h1>
-              <h1 className={classes.lowerBottomSectionHeader}>
-                det vi elsker
-              </h1>
-            </div>
-            <p className={classes.pBottom}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-          </div>
-          <img src={omoss} className={classes.rightBottomSection} />
-        </section>
+        
       </div>
     </main>
   );

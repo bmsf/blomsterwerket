@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Svar from "./components/Svar";
 
-import AOS from "aos";
+import Aos from "aos";
 import "aos/dist/aos.css";
 
 const App = () => {
@@ -53,7 +53,7 @@ const App = () => {
   useEffect(() => {
     fetchProducts();
     fetchCart();
-    AOS.init();
+    Aos.init({ startEvent: "load", once: false });
   }, []);
 
   return (

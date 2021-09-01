@@ -6,7 +6,10 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  IconButton,
 } from "@material-ui/core";
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import { Link } from "react-router-dom";
 
 import useStyles from "./styles";
 
@@ -14,29 +17,28 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
   const classes = useStyles();
 
   return (
-    <Card>
+    <Card className={classes.cartCard}>
       <CardMedia
         image={item.media.source}
         alt={item.name}
         className={classes.media}
       />
       <CardContent className={classes.cardContent}>
-        <Typography variant="h4">{item.name}</Typography>
-        <Typography variant="h5">
-          {item.line_total.formatted_with_symbol}
-        </Typography>
+        <Typography className={classes.itemName}>{item.name}</Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
         <div className={classes.buttons}>
           <Button
+            className={classes.itemName}
             type="button"
             size="small"
             onClick={() => onUpdateCartQty(item.id, item.quantity - 1)}
           >
             -
           </Button>
-          <Typography>{item.quantity}</Typography>
+          <Typography className={classes.itemName}>{item.quantity}</Typography>
           <Button
+            className={classes.itemName}
             type="button"
             size="small"
             onClick={() => onUpdateCartQty(item.id, item.quantity + 1)}
@@ -44,14 +46,12 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
             +
           </Button>
         </div>
-        <Button
-          variant="contained"
-          type="button"
-          color="secondary"
-          onClick={() => onRemoveFromCart(item.id)}
-        >
-          Fjern vare
-        </Button>
+        <Typography className={classes.itemName}>
+          {item.line_total.formatted_with_symbol}
+        </Typography>
+        <IconButton>
+          <HighlightOffIcon onClick={() => onRemoveFromCart(item.id)} />
+        </IconButton>
       </CardActions>
     </Card>
   );

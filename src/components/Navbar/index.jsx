@@ -8,7 +8,6 @@ import {
   Typography,
 } from "@material-ui/core";
 import {
-  ShoppingCart,
   Menu,
   Search,
   Facebook,

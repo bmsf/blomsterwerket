@@ -196,4 +196,63 @@ export default makeStyles((theme) => ({
     objectFit: "cover",
     filter: "blur(2px)",
   },
+
+  //Bottom section
+
+  bottomSection: {
+    display: "flex",
+    width: "100%",
+    backgroundColor: "#AFCECC",
+    margin: "0",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+
+  bottomSectionHeader: {
+    paddingTop: theme.spacing(10),
+    paddingLeft: theme.spacing(5),
+    fontFamily: "Playfair Display",
+    color: "#435E53",
+    position: "relative",
+    textTransform: "uppercase",
+    fontSize: "45px",
+    width: "100%",
+    selfAlign: "flex-start",
+    margin: "0",
+  },
+  lowerBottomSectionHeader: {
+    paddingLeft: theme.spacing(8),
+    fontFamily: "Playfair Display",
+    color: "#435E53",
+    position: "relative",
+    textTransform: "uppercase",
+    fontSize: "45px",
+    width: "100%",
+    selfAlign: "flex-start",
+    margin: "0",
+  },
+
+  pBottom: {
+    paddingLeft: theme.spacing(8),
+    position: "relative",
+    fontFamily: "Lato",
+    color: "#435E53",
+    width: "90%",
+    fontSize: "18px",
+  },
+
+  rightBottomSection: {
+    width: "40%",
+    height: "70%",
+    objectFit: "contain",
+  },
+  leftBottomSection: {
+    height: "100%",
+    width: "50%",
+    display: "flex",
+    flexDirection: "column",
+    alignContent: "center",
+    alignItems: "center",
+  },
 }));
