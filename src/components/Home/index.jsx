@@ -15,7 +15,7 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <main className={classes.main} className={classes.root}>
+    <main className={classes.main}>
       <div className={classes.toolbar} />
       <Container className={classes.wrapper}>
         <Grid container direction="row">
@@ -39,7 +39,7 @@ const Home = () => {
               data-aos-easing="ease-in"
               data-aos-duration="600"
             >
-              <img src={plant} className={classes.binderiImg} />
+              <img src={plant} className={classes.binderiImg} alt="Bilde av plante" />
               <div className={classes.topTextDiv}>
                 <h2 className={classes.topCategoryHeader}>Blomsterbinderi</h2>
                 <p className={classes.topSubHeader}>
@@ -65,7 +65,7 @@ const Home = () => {
                 data-aos-delay="300"
                 data-aos-easing="ease-in-quad"
               >
-                <img src={binderi} className={classes.smallCategoriesImg} />
+                <img src={binderi} className={classes.smallCategoriesImg} alt="Bilde av binderi"/>
                 <div className={classes.textDiv}>
                   <h2 className={classes.mainCategoryHeader}>
                     Blomster til bryllup
@@ -97,7 +97,7 @@ const Home = () => {
                 data-aos-delay="600"
                 data-aos-easing="ease-in-quad"
               >
-                <img src={image} className={classes.smallCategoriesImg} />
+                <img src={image} className={classes.smallCategoriesImg} alt="bilde av binderi"/>
                 <div className={classes.textDiv}>
                   <h2 className={classes.mainCategoryHeader}>
                     Blomster til bryllup
@@ -131,7 +131,7 @@ const Home = () => {
               data-aos-duration="600"
               data-aos-delay="900"
             >
-              <img src={wedding} className={classes.plantImg} />
+              <img src={wedding} className={classes.plantImg} alt="bilde av bryllup"/>
               <div className={classes.textDiv}>
                 <h2 className={classes.mainCategoryHeader}>
                   Blomster til bryllup
@@ -177,7 +177,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <img src={omoss} className={classes.rightBottomSection} />
+        <img src={omoss} className={classes.rightBottomSection} alt="bilde av ansatte"/>
       </section>
     </main>
   );

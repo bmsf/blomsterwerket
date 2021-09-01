@@ -5,11 +5,11 @@ import {
   CardContent,
   CardActions,
   Typography,
-  IconButton,
+  // IconButton,
   Divider,
-  Button,
+  // Button,
 } from "@material-ui/core";
-import { AddShoppingCart } from "@material-ui/icons";
+// import { AddShoppingCart } from "@material-ui/icons";
 import useStyles from "./styles";
 
 const Product = ({ product, onAddToCart }) => {

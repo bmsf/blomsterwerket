@@ -124,7 +124,6 @@ export default makeStyles((theme) => ({
     lineHeight: "1.5",
     color: "rgb(226, 226, 226)",
     fontWeight: "300",
-    paddingTop: "10px",
     [theme.breakpoints.down("md")]: {},
   },
 

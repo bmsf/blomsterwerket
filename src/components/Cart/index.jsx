@@ -7,7 +7,6 @@ import {
   Divider,
 } from "@material-ui/core";
 
-
 import { Link } from "react-router-dom";
 import useStyles from "./styles";
 import CartItem from "./CartItem/index";
@@ -65,6 +64,7 @@ const Cart = ({
               className={classes.emptyButton}
               type="button"
               onClick={handleEmptyCart}
+              href=""
             >
               Tøm handlekurv
             </a>
