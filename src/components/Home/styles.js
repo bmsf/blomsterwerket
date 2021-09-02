@@ -164,16 +164,20 @@ export default makeStyles((theme) => ({
       minHeight: "453px",
     },
     [theme.breakpoints.up("lg")]: {
-      paddingLeft: theme.spacing(2),
       maxHeight: "537px",
     },
   },
+
+  weddingImgContainer: {
+    width: "100%",
+    height: "100%",
+  },
+
   weddingImg: {
     objectFit: "cover",
     width: "100%",
     height: "100%",
   },
-
   weddingImgOverlay: {
     top: "0",
     position: "absolute",
@@ -186,11 +190,9 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    [theme.breakpoints.down("md")]: {
-      maxWidth: "100%",
-    },
-    [theme.breakpoints.down("lg")]: {
-      // minWidth: "95%",
+    padding: theme.spacing(10),
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
     },
   },
 
@@ -250,11 +252,12 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     textAlign: "center",
     [theme.breakpoints.down("md")]: {
-      height: "91%",
-      minWidth: "96%",
+      height: "94%",
+      width: "96%",
     },
     [theme.breakpoints.down("sm")]: {
-      // minWidth: "93%",
+      height: "91%",
+      width: "98%",
     },
     [theme.breakpoints.down("xs")]: {
       width: "96%",
@@ -273,11 +276,12 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     textAlign: "center",
     [theme.breakpoints.down("md")]: {
-      height: "91%",
-      minWidth: "97%",
+      height: "94%",
+      width: "96%",
     },
     [theme.breakpoints.down("sm")]: {
-      minWidth: "96%",
+      height: "91%",
+      width: "98%",
     },
     [theme.breakpoints.down("xs")]: {
       width: "94%",

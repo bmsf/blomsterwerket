@@ -149,7 +149,7 @@ const Home = () => {
               // data-aos-duration="600"
               // data-aos-delay="900"
             >
-              <div className={classes.weddingImg}>
+              <div className={classes.weddingImgContainer}>
                 <img
                   src={wedding}
                   className={classes.weddingImg}
