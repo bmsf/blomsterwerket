@@ -62,7 +62,7 @@ const Navbar = ({ totalItems }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/bryllup" className={classes.aTags}>
+                <Link to="/anledninger" className={classes.aTags}>
                   Bryllup
                 </Link>
               </li>

@@ -8,6 +8,15 @@ export default makeStyles((theme) => ({
     paddingLeft: "10px",
   },
 
+  wrapper: {
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
+  },
+
   infoTitle: {
     fontFamily: "Lato",
   },

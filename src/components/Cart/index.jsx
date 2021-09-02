@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Container,
   Typography,
@@ -10,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import useStyles from "./styles";
 import CartItem from "./CartItem/index";
+import Popup from "../Popup/index.jsx";
 
 const Cart = ({
   cart,
@@ -21,14 +23,21 @@ const Cart = ({
 
   const EmptyCart = () => (
     <>
-      <Typography className={classes.title} gutterBottom>
-        HANDLEKURV
-      </Typography>
-      <Typography className={classes.infoTitle}>
-        Du har ingen varer i handlekurven din!
-      </Typography>
+      {" "}
+      <div className={classes.wrapper}>
+        <Typography className={classes.title} gutterBottom>
+          HANDLEKURV
+        </Typography>
+        <Typography className={classes.infoTitle}>
+          Du har ingen varer i handlekurven din!
+        </Typography>
+      </div>
     </>
   );
+
+  //Popup button
+
+  const [buttonPopup, setButtonPopup] = useState(false);
 
   const FilledCart = () => (
     <>
@@ -60,13 +69,12 @@ const Cart = ({
           </div>
           <div className={classes.cartHeader}>
             <Typography className={classes.title}>HANDLEKURV</Typography>
-            <a
+            <Button
               className={classes.emptyButton}
-              type="button"
-              href={handleEmptyCart}
+              onClick={() => setButtonPopup(true)}
             >
               Tøm handlekurv
-            </a>
+            </Button>
           </div>
         </div>
         <Divider />
@@ -120,13 +128,17 @@ const Cart = ({
           </Button>
         </div>
       </Grid>
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+        <Button onClick={handleEmptyCart}>Ja</Button>
+      </Popup>
+      ;
     </>
   );
 
   if (!cart.line_items) return "Loading...";
 
   return (
-    <Container className={classes.wrapper}>
+    <Container>
       <div className={classes.toolbar} />
       {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
     </Container>

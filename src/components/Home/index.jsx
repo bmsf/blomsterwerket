@@ -11,7 +11,7 @@ import "../../index.css";
 
 import useStyles from "./styles";
 
-const Home = () => {
+const Home = ({ handleEmptyCart }) => {
   const classes = useStyles();
 
   return (
@@ -53,7 +53,11 @@ const Home = () => {
                     <p className={classes.topSubHeader}>
                       Velkommen til Blomster Werket!
                     </p>
-                    <Button variant="contained" className={classes.topButton}>
+                    <Button
+                      variant="contained"
+                      className={classes.topButton}
+                      onClick={handleEmptyCart}
+                    >
                       Utforsk
                     </Button>
                   </div>

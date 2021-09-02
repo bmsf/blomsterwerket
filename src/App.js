@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/index";
 import Products from "./components/Products/index";
 import Checkout from "./components/CheckoutForm/Checkout/index";
 
+
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
@@ -56,13 +57,15 @@ const App = () => {
     Aos.init({ startEvent: "load", once: false });
   }, []);
 
+ 
+
   return (
     <Router>
       <div className="app">
         <Navbar totalItems={cart.total_items} />
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home handleEmptyCart={handleEmptyCart} />
           </Route>
           <Route exact path="/shop">
             <Products
@@ -71,6 +74,7 @@ const App = () => {
               totalProducts={products.length}
             />
           </Route>
+          <Route exact path="/anledninger"></Route>
           <Route exact path="/svar">
             <Svar />
           </Route>
@@ -81,6 +85,7 @@ const App = () => {
               handleRemoveFromCart={handleRemoveFromCart}
               handleEmptyCart={handleEmptyCart}
             />
+            
           </Route>
           <Route exact path="/checkout">
             <Checkout cart={cart} />

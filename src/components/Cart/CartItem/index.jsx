@@ -8,7 +8,7 @@ import {
   CardMedia,
   IconButton,
 } from "@material-ui/core";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import CancelIcon from "@material-ui/icons/Cancel";
 
 import useStyles from "./styles";
 
@@ -49,7 +49,7 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
           {item.line_total.formatted_with_symbol}
         </Typography>
         <IconButton>
-          <HighlightOffIcon onClick={() => onRemoveFromCart(item.id)} />
+          <CancelIcon onClick={() => onRemoveFromCart(item.id)} />
         </IconButton>
       </CardActions>
     </Card>
