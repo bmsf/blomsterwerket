@@ -23,4 +23,16 @@ export default makeStyles((theme) => ({
       padding: theme.spacing(2),
     },
   },
+
+  productsAndFilter: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+
+  header: {
+    fontFamily: "Playfair Display",
+    fontSize: "20px",
+    fontWeight: "400",
+    paddingBottom: theme.spacing(3),
+  },
 }));

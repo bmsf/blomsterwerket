@@ -1,10 +1,10 @@
 import React from "react";
 import { Grid, Container, Button } from "@material-ui/core";
 
-import image from "../../assets/mainpage.jpeg";
+import binderilandscape from "../../assets/binderilandscape.jpeg";
 import wedding from "../../assets/wedding.jpeg";
-import plant from "../../assets/plant4.jpg";
 import binderi from "../../assets/blomsterbinderi.jpeg";
+import interiør from "../../assets/interiør.jpeg";
 import omoss from "../../assets/omoss.jpeg";
 
 import "../../index.css";
@@ -35,19 +35,29 @@ const Home = () => {
               lg={12}
               xl={12}
               className={classes.topLandscapeContainer}
-              data-aos="fade-right"
-              data-aos-easing="ease-in"
-              data-aos-duration="600"
+              // data-aos="fade-right"
+              // data-aos-easing="ease-in"
+              // data-aos-duration="600"
             >
-              <img src={plant} className={classes.binderiImg} alt="Bilde av plante" />
-              <div className={classes.topTextDiv}>
-                <h2 className={classes.topCategoryHeader}>Blomsterbinderi</h2>
-                <p className={classes.topSubHeader}>
-                  Velkommen til Blomster Werket!
-                </p>
-                <Button variant="contained" className={classes.topButton}>
-                  Se utvalg
-                </Button>
+              <div className={classes.binderiImg}>
+                <img
+                  src={binderilandscape}
+                  className={classes.binderiImg}
+                  alt="Bilde av binderi"
+                />
+                <div className={classes.landscapeImgOverlay}>
+                  <div className={classes.topTextDiv}>
+                    <h2 className={classes.topCategoryHeader}>
+                      Blomsterbinderi
+                    </h2>
+                    <p className={classes.topSubHeader}>
+                      Velkommen til Blomster Werket!
+                    </p>
+                    <Button variant="contained" className={classes.topButton}>
+                      Utforsk
+                    </Button>
+                  </div>
+                </div>
               </div>
             </Grid>
             <Grid item xs={12} container>
@@ -60,27 +70,31 @@ const Home = () => {
                 xl={6}
                 className={classes.smallCategoriesContainer}
                 style={{ paddingRight: "10px" }}
-                data-aos="fade-up"
-                data-aos-duration="600"
-                data-aos-delay="300"
-                data-aos-easing="ease-in-quad"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                // data-aos-delay="300"
+                // data-aos-easing="ease-in-quad"
               >
-                <img src={binderi} className={classes.smallCategoriesImg} alt="Bilde av binderi"/>
-                <div className={classes.textDiv}>
-                  <h2 className={classes.mainCategoryHeader}>
-                    Blomster til bryllup
-                  </h2>
-                  <p className={classes.subHeader}>
-                    Velkommen til Blomster Werket!
-                  </p>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    size="large"
-                    className={classes.buttonMain}
-                  >
-                    Se Utvalg
-                  </Button>
+                <div className={classes.smallCategoriesImg}>
+                  <img
+                    src={binderi}
+                    className={classes.smallCategoriesImg}
+                    alt="Bilde av binderi"
+                  />
+                  <div className={classes.smallImgOverlayLeft}>
+                    <div className={classes.textDiv}>
+                      <h2 className={classes.mainCategoryHeader}>Buketter</h2>
+                      <p className={classes.subHeader}>Bestill i nettbutikk</p>
+                      <Button
+                        variant="contained"
+                        color="secondary"
+                        size="medium"
+                        className={classes.buttonMain}
+                      >
+                        Se utvalg
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </Grid>
               <Grid
@@ -92,27 +106,31 @@ const Home = () => {
                 xl={6}
                 className={classes.smallCategoriesContainer}
                 style={{ paddingLeft: "10px" }}
-                data-aos="fade-up"
-                data-aos-duration="600"
-                data-aos-delay="600"
-                data-aos-easing="ease-in-quad"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                // data-aos-delay="600"
+                // data-aos-easing="ease-in-quad"
               >
-                <img src={image} className={classes.smallCategoriesImg} alt="bilde av binderi"/>
-                <div className={classes.textDiv}>
-                  <h2 className={classes.mainCategoryHeader}>
-                    Blomster til bryllup
-                  </h2>
-                  <p className={classes.subHeader}>
-                    Velkommen til Blomster Werket!
-                  </p>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    size="large"
-                    className={classes.buttonMain}
-                  >
-                    Se Utvalg
-                  </Button>
+                <div className={classes.smallCategoriesImg}>
+                  <img
+                    src={interiør}
+                    className={classes.smallCategoriesImg}
+                    alt="bilde av binderi"
+                  />
+                  <div className={classes.smallImgOverlayRight}>
+                    <div className={classes.textDiv}>
+                      <h2 className={classes.mainCategoryHeader}>Interiør</h2>
+                      <p className={classes.subHeader}>Nyheter!</p>
+                      <Button
+                        variant="contained"
+                        color="inherit"
+                        size="medium"
+                        className={classes.buttonMain}
+                      >
+                        Se utvalg
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </Grid>
             </Grid>
@@ -126,27 +144,35 @@ const Home = () => {
               lg={12}
               xl={8}
               className={classes.largeCategoryContainer}
-              data-aos="fade-left"
-              data-aos-offset="500"
-              data-aos-duration="600"
-              data-aos-delay="900"
+              // data-aos="fade-left"
+              // data-aos-offset="500"
+              // data-aos-duration="600"
+              // data-aos-delay="900"
             >
-              <img src={wedding} className={classes.plantImg} alt="bilde av bryllup"/>
-              <div className={classes.textDiv}>
-                <h2 className={classes.mainCategoryHeader}>
-                  Blomster til bryllup
-                </h2>
-                <p className={classes.subHeader}>
-                  Velkommen til Blomster Werket!
-                </p>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  size="large"
-                  className={classes.buttonMain}
-                >
-                  Se Utvalg
-                </Button>
+              <div className={classes.weddingImg}>
+                <img
+                  src={wedding}
+                  className={classes.weddingImg}
+                  alt="bilde av bryllup"
+                />
+                <div className={classes.weddingImgOverlay}>
+                  <div className={classes.textDiv}>
+                    <h2 className={classes.mainCategoryHeader}>
+                      Blomster til bryllup
+                    </h2>
+                    <p className={classes.subHeader}>
+                      Vi steller i stand alt til ditt bryllup
+                    </p>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      size="large"
+                      className={classes.buttonMain}
+                    >
+                      Utforsk
+                    </Button>
+                  </div>
+                </div>
               </div>
             </Grid>
           </Grid>
@@ -177,7 +203,11 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <img src={omoss} className={classes.rightBottomSection} alt="bilde av ansatte"/>
+        <img
+          src={omoss}
+          className={classes.rightBottomSection}
+          alt="bilde av ansatte"
+        />
       </section>
     </main>
   );

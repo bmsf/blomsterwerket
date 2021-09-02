@@ -83,7 +83,9 @@ export default makeStyles((theme) => ({
     width: "100%",
     height: "100%",
     objectFit: "cover",
+    position: "relative",
   },
+
   textDiv: {
     display: "flex",
     flexDirection: "column",
@@ -106,6 +108,19 @@ export default makeStyles((theme) => ({
     },
   },
 
+  landscapeImgOverlay: {
+    position: "absolute",
+    top: "0",
+    width: "100%",
+    height: "100%",
+    background: "rgba(0, 0, 0, 0.5)",
+    color: "#FFFFFF",
+    display: "flex",
+    alignItems: "center",
+    textAlign: "center",
+    paddingLeft: theme.spacing(5),
+  },
+
   //Big card on front page
   mainCategoryHeader: {
     margin: "0",
@@ -114,10 +129,11 @@ export default makeStyles((theme) => ({
     fontSize: "1.5rem",
     position: "relative",
     textTransform: "uppercase",
+    fontWeight: "bold",
   },
 
   subHeader: {
-    paddingTop: "20px",
+    paddingTop: "10px",
     paddingBottom: theme.spacing(2),
     fontFamily: "Lato",
     fontSize: "16px",
@@ -129,7 +145,7 @@ export default makeStyles((theme) => ({
 
   buttonMain: {
     bottom: "15%",
-    backgroundColor: "#A8C6CA",
+    backgroundColor: "#FFFFFF",
     fontFamily: "Lato",
   },
 
@@ -145,14 +161,37 @@ export default makeStyles((theme) => ({
     },
     [theme.breakpoints.up("md")]: {
       paddingLeft: theme.spacing(2),
-      maxHeight: "545px",
+      minHeight: "453px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      paddingLeft: theme.spacing(2),
+      maxHeight: "537px",
     },
   },
-  plantImg: {
+  weddingImg: {
     objectFit: "cover",
     width: "100%",
     height: "100%",
-    filter: "blur(5px)",
+  },
+
+  weddingImgOverlay: {
+    top: "0",
+    position: "absolute",
+    width: "98%",
+    height: "100%",
+    background: "rgba(0, 0, 0, 0.5)",
+    color: "#FFFFFF",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    [theme.breakpoints.down("md")]: {
+      maxWidth: "100%",
+    },
+    [theme.breakpoints.down("lg")]: {
+      // minWidth: "95%",
+    },
   },
 
   //Small card on frontpage
@@ -188,12 +227,61 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       maxHeight: "381px",
     },
+    [theme.breakpoints.up("lg")]: {},
   },
   smallCategoriesImg: {
     height: "100%",
     width: "100%",
     objectFit: "cover",
-    filter: "blur(2px)",
+    // filter: "blur(2px)",
+  },
+
+  smallImgOverlayLeft: {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "97%",
+    height: "95%",
+    background: "rgba(0, 0, 0, 0.3)",
+    color: "#FFFFFF",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    [theme.breakpoints.down("md")]: {
+      height: "91%",
+      minWidth: "96%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      // minWidth: "93%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "96%",
+    },
+  },
+  smallImgOverlayRight: {
+    position: "absolute",
+    top: "0",
+    width: "97%",
+    height: "95%",
+    background: "rgba(0, 0, 0, 0.5)",
+    color: "#FFFFFF",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    [theme.breakpoints.down("md")]: {
+      height: "91%",
+      minWidth: "97%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      minWidth: "96%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "94%",
+    },
   },
 
   //Bottom section

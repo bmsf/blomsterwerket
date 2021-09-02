@@ -13,7 +13,7 @@ import {
   Instagram,
   LocalMallSharp,
 } from "@material-ui/icons";
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import useStyles from "./styles";
 
@@ -62,8 +62,8 @@ const Navbar = ({ totalItems }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/nyheter" className={classes.aTags}>
-                  Blomsterbinderi
+                <Link to="/bryllup" className={classes.aTags}>
+                  Bryllup
                 </Link>
               </li>
               <li>
