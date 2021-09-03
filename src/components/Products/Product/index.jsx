@@ -20,7 +20,10 @@ const Product = ({ product, onAddToCart }) => {
 
   const handleBuy = () => {
     onAddToCart(product.id, 1);
-    setBuyButton((previousBuyButton) => (previousBuyButton = false));
+    setBuyButton(false);
+    setTimeout(function () {
+      setBuyButton(true);
+    }, 2000);
   };
 
   const FilledButton = () => {
