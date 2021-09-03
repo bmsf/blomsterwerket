@@ -62,7 +62,6 @@ const Cart = ({
               size="large"
               type="button"
               variant="contained"
-              color="primary"
             >
               Gå til kassen
             </Button>
@@ -82,10 +81,12 @@ const Cart = ({
           <div></div>
           <div className={classes.subHeader}>
             <Typography className={classes.subHeaderTextAntall}>
+              Navn
+            </Typography>
+            <Typography className={classes.subHeaderTextPris}>
               Antall
             </Typography>
-            <Typography className={classes.subHeaderTextPris}>Pris</Typography>
-            <Typography className={classes.subHeaderText}>Totalt</Typography>
+            <Typography className={classes.subHeaderText}>Pris</Typography>
             <Typography className={classes.subHeaderText}>Slett</Typography>
           </div>
         </div>

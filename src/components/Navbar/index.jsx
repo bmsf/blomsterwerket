@@ -1,10 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import {
   AppBar,
   Toolbar,
   IconButton,
   Badge,
   Typography,
+  InputBase,
 } from "@material-ui/core";
 import {
   Menu,
@@ -20,6 +22,8 @@ import useStyles from "./styles";
 const Navbar = ({ totalItems }) => {
   const classes = useStyles();
   // const location = useLocation();
+
+  const [searchButton, setSearchButton] = useState(false);
 
   return (
     <>
@@ -73,17 +77,33 @@ const Navbar = ({ totalItems }) => {
               </li>
             </ul>
           </nav>
-          <div className={classes.button}>
-            <IconButton
-              component={Link}
-              to="/"
-              aria-label="Search button"
-              color="inherit"
-            >
-              <Search className={classes.searchBar} />
-            </IconButton>
-          </div>
-
+          {searchButton ? (
+            <div className={classes.button}>
+              <IconButton
+                onClick={() => setSearchButton(false)}
+                aria-label="Search button"
+                color="inherit"
+              >
+                <Search className={classes.searchBar} />
+              </IconButton>
+            </div>
+          ) : (
+            <div className={classes.button}>
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <Search />
+                </div>
+                <InputBase
+                  placeholder="Søk…"
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </div>
+            </div>
+          )}
           <div className={classes.button}>
             <IconButton
               component={Link}

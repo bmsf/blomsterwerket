@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     minHeight: "150px",
-    backgroundColor: "#feefe9",
+    backgroundColor: "#FFFFFF",
   },
   cardContent: {
     display: "flex",

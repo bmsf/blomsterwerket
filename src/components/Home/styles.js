@@ -293,7 +293,7 @@ export default makeStyles((theme) => ({
   bottomSection: {
     display: "flex",
     width: "100%",
-    backgroundColor: "#AFCECC",
+    backgroundColor: "#2B2C38",
     margin: "0",
     [theme.breakpoints.down("sm")]: {
       display: "none",
@@ -304,7 +304,7 @@ export default makeStyles((theme) => ({
     paddingTop: theme.spacing(10),
     paddingLeft: theme.spacing(5),
     fontFamily: "Playfair Display",
-    color: "#435E53",
+    color: "#EEECE7",
     position: "relative",
     textTransform: "uppercase",
     fontSize: "45px",
@@ -315,7 +315,7 @@ export default makeStyles((theme) => ({
   lowerBottomSectionHeader: {
     paddingLeft: theme.spacing(8),
     fontFamily: "Playfair Display",
-    color: "#435E53",
+    color: "#EEECE7",
     position: "relative",
     textTransform: "uppercase",
     fontSize: "45px",
@@ -328,7 +328,7 @@ export default makeStyles((theme) => ({
     paddingLeft: theme.spacing(8),
     position: "relative",
     fontFamily: "Lato",
-    color: "#435E53",
+    color: "#EEECE7",
     width: "90%",
     fontSize: "18px",
   },
@@ -345,5 +345,27 @@ export default makeStyles((theme) => ({
     flexDirection: "column",
     alignContent: "center",
     alignItems: "center",
+  },
+
+  footer: {
+    paddingTop: theme.spacing(6),
+    paddingBottom: theme.spacing(6),
+    height: "400px",
+    
+  },
+  footerHeader: {
+    fontSize: "20px",
+    fontFamily: "Playfair display",
+    paddingBottom: theme.spacing(5),
+  },
+  footerText: {
+    fontSize: "16px",
+    fontFamily: "Lato",
+    paddingBottom: theme.spacing(3),
+  },
+  nyhetsbrevField: {
+    fontSize: "16px",
+    fontFamily: "Lato",
+    paddingTop: theme.spacing(2),
   },
 }));

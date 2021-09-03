@@ -40,7 +40,7 @@ export default makeStyles((theme) => ({
     width: "100%",
   },
   keepShoppingButton: {
-    backgroundColor: "#D1D6FF",
+    backgroundColor: "#F9F9F9",
     fontFamily: "Lato",
     fontWeight: "bold",
     minWidth: "200px",
@@ -53,7 +53,7 @@ export default makeStyles((theme) => ({
   },
   checkoutButton: {
     minWidth: "200px",
-    backgroundColor: "#9B9EB3",
+    backgroundColor: "#A28767",
     fontFamily: "Lato",
     fontWeight: "bold",
   },

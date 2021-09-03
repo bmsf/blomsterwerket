@@ -93,15 +93,19 @@ export default makeStyles((theme) => ({
   // desktop Navbar:
   desktopNav: {
     display: "none",
+
     [theme.breakpoints.up("md")]: {
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
       minHeight: "8vh",
-      width: "55%",
+      width: "50%",
       paddingRight: "3rem",
       flexWrap: "wrap",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "45%",
     },
   },
   navLinks: {
@@ -122,5 +126,17 @@ export default makeStyles((theme) => ({
   aTags: {
     color: "#0A1F11",
     fontFamily: "Lato",
+  },
+
+  //Search section
+
+  searchIconButton: {
+    padding: theme.spacing(0, 2),
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
 }));
