@@ -7,9 +7,6 @@ import {
   Card,
   CardMedia,
   CardContent,
-  Container,
-  Box,
-  TextField,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import {
@@ -19,13 +16,13 @@ import {
   Twitter,
 } from "@material-ui/icons";
 
-import { Input, Carousel } from "antd";
+import { Input } from "antd";
 
 import wedding from "../../assets/wedding.jpeg";
-import bestseller1 from "../../assets/bestseller1.png";
+
 import bestseller2 from "../../assets/bestseller2.png";
 import bestseller3 from "../../assets/bestseller3.png";
-import utsidebutikk from "../../assets/darkblue.jpg";
+import utsidebutikk from "../../assets/utsidebutikk.png";
 import rounded from "../../assets/roundedbig.png";
 
 import "../../index.css";
@@ -61,7 +58,11 @@ const Home = ({ handleEmptyCart }) => {
           </IconButton>
         </div>
         <div className={classes.root} />
-        <img src={rounded} className={classes.roundedImgFrontpage} />
+        <img
+          src={rounded}
+          className={classes.roundedImgFrontpage}
+          alt="Bilde av blomster"
+        />
         <div className={classes.root} />
         <div className={classes.textDivFrontpage}>
           <div>
@@ -75,7 +76,7 @@ const Home = ({ handleEmptyCart }) => {
               <Typography variant="h6" className={classes.shopNowText}>
                 Handle nå
               </Typography>
-              <a class="link" href="#">
+              <a class="link" href="./">
                 <IconButton>
                   <ArrowRightAlt />
                 </IconButton>
@@ -97,7 +98,11 @@ const Home = ({ handleEmptyCart }) => {
             only the freshest flowers are picked every day.
           </Typography>
         </div>
-        <img src={utsidebutikk} className={classes.utsidebutikk} />
+        <img
+          src={utsidebutikk}
+          className={classes.utsidebutikk}
+          alt="Bilde av butikken utvendig"
+        />
       </div>
       <div className={classes.bestSellerSection}>
         <Typography className={classes.aboutUsHeader}>Best sellers</Typography>
@@ -144,7 +149,7 @@ const Home = ({ handleEmptyCart }) => {
           >
             Handle nå
           </Typography>
-          <a class="link" href="#">
+          <a class="link" href="./">
             <IconButton>
               <ArrowRightAlt />
             </IconButton>
@@ -262,39 +267,47 @@ const Home = ({ handleEmptyCart }) => {
         <div className={classes.footerDiv}>
           <ul className={classes.footerList}>
             <li>
-              <a className={classes.footerText}>About Us</a>
+              <a className={classes.footerText} href="./">
+                About Us
+              </a>
             </li>
             <li>
-              <a className={classes.footerText}>Sale</a>
+              <a className={classes.footerText} href="./">
+                Sale
+              </a>
             </li>
             <li>
-              <a className={classes.footerText}>Delivery & Payment</a>
-            </li>
-          </ul>
-        </div>
-        <div className={classes.logoDiv}>
-          <ul className={classes.footerList}>
-            <li>
-              <a className={classes.footerText}>Blog</a>
-            </li>
-            <li>
-              <a className={classes.footerText}>FAQ</a>
-            </li>
-            <li>
-              <a className={classes.footerText}>Subscriptions</a>
+              <a className={classes.footerText} href="./">
+                Delivery & Payment
+              </a>
             </li>
           </ul>
         </div>
         <div className={classes.logoDiv}>
           <ul className={classes.footerList}>
             <li>
-              <a className={classes.footerText}>Contact</a>
+              <a className={classes.footerText} href="./">
+                Blog
+              </a>
             </li>
             <li>
-              <a className={classes.footerText}>+47 000 00 00</a>
+              <a className={classes.footerText} href="./">FAQ</a>
             </li>
             <li>
-              <a className={classes.footerText}>info@bw.com</a>
+              <a className={classes.footerText} href="./">Subscriptions</a>
+            </li>
+          </ul>
+        </div>
+        <div className={classes.logoDiv}>
+          <ul className={classes.footerList}>
+            <li>
+              <a className={classes.footerText} href="./">Contact</a>
+            </li>
+            <li>
+              <a className={classes.footerText} href="./">+47 000 00 00</a>
+            </li>
+            <li>
+              <a className={classes.footerText} href="./">info@bw.com</a>
             </li>
           </ul>
         </div>

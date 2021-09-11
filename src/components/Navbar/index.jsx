@@ -1,13 +1,12 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import {
   AppBar,
   Toolbar,
   IconButton,
   Badge,
   Typography,
-  InputBase,
-  useMediaQuery,
+ 
 } from "@material-ui/core";
 import { LocalMallOutlined, Menu } from "@material-ui/icons";
 import { Link } from "react-router-dom";

@@ -123,7 +123,7 @@ export default makeStyles((theme) => ({
     objectFit: "contain",
     borderTopLeftRadius: "150px",
     borderBottomLeftRadius: "150px",
-    width: "40%",
+    width: "30%",
     shapeOutside: "circle()",
     [theme.breakpoints.down("xs")]: {
       width: "40%",
@@ -159,11 +159,11 @@ export default makeStyles((theme) => ({
     },
   },
 
-  root: {
-    maxWidth: "100%",
-    backgroundColor: "#F5FAFD",
-    cursor: "pointer",
-  },
+  // root: {
+  //   maxWidth: "100%",
+  //   backgroundColor: "#F5FAFD",
+  //   cursor: "pointer",
+  // },
   media: {
     height: "330px",
     // 16:9
@@ -285,7 +285,6 @@ export default makeStyles((theme) => ({
     justifyContent: "space-around",
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(6),
-    backgroundColor: "#121c25",
     backgroundColor: "#121c25",
   },
 
