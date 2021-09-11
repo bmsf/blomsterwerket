@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   title: {
-    fontFamily: "Playfair display",
+    fontFamily: "Roseritta",
     fontSize: "24px",
     paddingLeft: "10px",
   },
@@ -18,7 +18,7 @@ export default makeStyles((theme) => ({
   },
 
   infoTitle: {
-    fontFamily: "Lato",
+    fontFamily: "Jost",
   },
 
   cartButtonRow: {
@@ -40,8 +40,7 @@ export default makeStyles((theme) => ({
     width: "100%",
   },
   keepShoppingButton: {
-    backgroundColor: "#F9F9F9",
-    fontFamily: "Lato",
+    fontFamily: "Jost",
     fontWeight: "bold",
     minWidth: "200px",
     [theme.breakpoints.down("xs")]: {
@@ -53,14 +52,13 @@ export default makeStyles((theme) => ({
   },
   checkoutButton: {
     minWidth: "200px",
-    backgroundColor: "#A28767",
-    fontFamily: "Lato",
+    fontFamily: "Jost",
     fontWeight: "bold",
   },
   emptyButton: {
     textDecoration: "underline",
     cursor: "pointer",
-    fontFamily: "Lato",
+    fontFamily: "Jost",
   },
   cardDetails: {
     display: "flex",
@@ -76,26 +74,26 @@ export default makeStyles((theme) => ({
   },
 
   subHeaderTextAntall: {
-    fontFamily: "Lato",
+    fontFamily: "Jost",
     fontSize: "14px",
     paddingLeft: "50px",
     paddingRight: "315px",
   },
 
   subHeaderTextPris: {
-    fontFamily: "Lato",
+    fontFamily: "Jost",
     fontSize: "14px",
     paddingLeft: "50px",
     paddingRight: "70px",
   },
   subHeaderText: {
-    fontFamily: "Lato",
+    fontFamily: "Jost",
     fontSize: "14px",
     paddingLeft: "50px",
     paddingRight: "30px",
   },
   totalSum: {
-    fontFamily: "Playfair display",
+    fontFamily: "Roseritta",
     fontSize: "24px",
     alignSelf: "flex-end",
     padding: theme.spacing(3),

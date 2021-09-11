@@ -41,7 +41,7 @@ const Cart = ({
 
   const FilledCart = () => (
     <>
-      <Grid container spacing={3} direction="column">
+      <Grid container spacing={3} direction="column" className={classes.container}>
         <div className={classes.cardDetails}>
           <div className={classes.cartButtonRow}>
             <Button
@@ -51,7 +51,7 @@ const Cart = ({
               size="large"
               type="button"
               variant="contained"
-              color="inherit"
+              color="primary"
             >
               Fortsett å handle
             </Button>
@@ -62,6 +62,7 @@ const Cart = ({
               size="large"
               type="button"
               variant="contained"
+              color="primary"
             >
               Gå til kassen
             </Button>
@@ -71,6 +72,7 @@ const Cart = ({
             <Button
               className={classes.emptyButton}
               onClick={() => setButtonPopup(true)}
+              color="primary"
             >
               Tøm handlekurv
             </Button>
@@ -78,7 +80,6 @@ const Cart = ({
         </div>
         <Divider />
         <div className={classes.subHeader}>
-          <div></div>
           <div className={classes.subHeader}>
             <Typography className={classes.subHeaderTextAntall}>
               Navn
@@ -112,7 +113,7 @@ const Cart = ({
             size="large"
             type="button"
             variant="contained"
-            color="inherit"
+            color="primary"
           >
             Fortsett å handle
           </Button>
@@ -140,6 +141,7 @@ const Cart = ({
 
   return (
     <Container>
+      <div className={classes.toolbar} />
       <div className={classes.toolbar} />
       {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}
     </Container>

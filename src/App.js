@@ -3,7 +3,7 @@ import Cart from "./components/Cart/index";
 import Navbar from "./components/Navbar/index";
 import Products from "./components/Products/index";
 import Checkout from "./components/CheckoutForm/Checkout/index";
-
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -57,42 +57,61 @@ const App = () => {
     Aos.init({ startEvent: "load", once: false });
   }, []);
 
- 
+  //Material UI Theme
+
+  const theme = createMuiTheme({
+    palette: {
+      primary: {
+        main: "#121c25",
+      },
+      secondary: {
+        main: "#F5FAFD",
+      },
+    },
+    overrides: {
+      MuiButton: {
+        label: {
+          color: "#f1f1f1",
+        },
+      },
+    },
+  });
 
   return (
-    <Router>
-      <div className="app">
-        <Navbar totalItems={cart.total_items} />
-        <Switch>
-          <Route exact path="/">
-            <Home handleEmptyCart={handleEmptyCart} />
-          </Route>
-          <Route exact path="/shop">
-            <Products
-              products={products}
-              onAddToCart={handleAddToCart}
-              totalProducts={products.length}
-            />
-          </Route>
-          <Route exact path="/anledninger"></Route>
-          <Route exact path="/svar">
-            <Svar />
-          </Route>
-          <Route exact path="/cart">
-            <Cart
-              cart={cart}
-              handleUpdateCartQty={handleUpdateCartQty}
-              handleRemoveFromCart={handleRemoveFromCart}
-              handleEmptyCart={handleEmptyCart}
-            />
-            
-          </Route>
-          <Route exact path="/checkout">
-            <Checkout cart={cart} />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <div className="app">
+          <Navbar totalItems={cart.total_items} />
+          <Switch>
+            <Route exact path="/">
+              <Home handleEmptyCart={handleEmptyCart} />
+            </Route>
+            <Route exact path="/shop">
+              <Products
+                products={products}
+                onAddToCart={handleAddToCart}
+                totalProducts={products.length}
+              />
+            </Route>
+            <Route exact path="/anledninger"></Route>
+            <Route exact path="/svar">
+              <Svar />
+            </Route>
+            <Route exact path="/cart">
+              <Cart
+                cart={cart}
+                handleUpdateCartQty={handleUpdateCartQty}
+                handleRemoveFromCart={handleRemoveFromCart}
+                handleEmptyCart={handleEmptyCart}
+              />
+            </Route>
+            <Route exact path="/checkout">
+              <Checkout cart={cart} />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 };
 

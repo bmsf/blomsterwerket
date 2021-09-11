@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     flexGrow: 1,
   },
   main: {
-    backgroundColor: "#feefe9",
+    backgroundColor: "#F5FAFD",
     margin: "0",
     padding: "0",
     width: "100%",
@@ -22,350 +22,303 @@ export default makeStyles((theme) => ({
     },
   },
 
-  topTextDiv: {
-    top: "10%",
+  //Frontpage top section
+
+  frontPageDiv: {
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-    position: "absolute",
-    [theme.breakpoints.down("md")]: {},
-  },
-
-  topCategoryHeader: {
-    margin: "5px",
-    paddingLeft: theme.spacing(5),
-    alignSelf: "flex-start",
-    fontFamily: "Playfair Display",
-    color: "rgb(226, 226, 226)",
-    fontSize: "1.5rem",
-    position: "relative",
-    textTransform: "uppercase",
-  },
-  topSubHeader: {
-    margin: "5px",
-    paddingLeft: theme.spacing(5),
-    paddingBottom: theme.spacing(1),
-    fontFamily: "Lato",
-    fontSize: "16px",
-    lineHeight: "1.5",
-    color: "rgb(226, 226, 226)",
-    fontWeight: "300",
-    alignSelf: "flex-start",
-    [theme.breakpoints.down("md")]: {},
-  },
-  topButton: {
-    right: "14%",
-    backgroundColor: "#FFFFFF",
-    fontFamily: "Lato",
-  },
-  // Cards
-
-  gridItem: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    textAlign: "center",
-    position: "relative",
-  },
-
-  sectionParagraph: {
-    fontFamily: "Lato",
-    fontSize: "1.2vw",
-    lineHeight: "1.5",
-    color: "rgb(226, 226, 226)",
-    fontWeight: "300",
-  },
-
-  binderi: { position: "relative" },
-  binderiImg: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    position: "relative",
-  },
-
-  textDiv: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-    position: "absolute",
-    [theme.breakpoints.down("md")]: {},
-  },
-
-  topLandscapeContainer: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "flex-start",
-    position: "relative",
-    paddingBottom: "20px",
-    maxHeight: "174px",
-    [theme.breakpoints.up("lg")]: {
-      minHeight: "165px",
+    justifyContent: "space-around",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+      alignItems: "center",
+      paddingTop: theme.spacing(3),
     },
   },
 
-  landscapeImgOverlay: {
-    position: "absolute",
-    top: "0",
-    width: "100%",
-    height: "100%",
-    background: "rgba(0, 0, 0, 0.5)",
-    color: "#FFFFFF",
+  socialButtons: {
     display: "flex",
-    alignItems: "center",
-    textAlign: "center",
-    paddingLeft: theme.spacing(5),
+    flexDirection: "column",
+    height: "100vh",
+    justifyContent: "center",
+    paddingBottom: theme.spacing(10),
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
+  },
+  socialButton: {
+    fill: "#121c25",
   },
 
-  //Big card on front page
-  mainCategoryHeader: {
-    margin: "0",
-    fontFamily: "Playfair Display",
-    color: "rgb(226, 226, 226)",
-    fontSize: "1.5rem",
+  roundedImgFrontpage: {
+    width: "22%",
+    objectFit: "contain",
+    paddingBottom: theme.spacing(10),
+    [theme.breakpoints.down("xs")]: {
+      minWidth: "35%",
+      paddingBottom: theme.spacing(5),
+    },
+  },
+  textDivFrontpage: {
+    width: "55%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignContent: "center",
+    paddingRight: theme.spacing(20),
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      paddingRight: "0",
+    },
+  },
+  headerFrontpageTop: {
+    display: "flex",
+    fontSize: "8vw",
+    fontFamily: "Roseritta",
+    textTransform: "none",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "14vw",
+      justifyContent: "center",
+      margin: "0",
+    },
+  },
+  headerFrontpage: {
+    display: "flex",
+    justifyContent: "flex-end",
+    fontSize: "8vw",
+    fontFamily: "Roseritta",
+    textTransform: "none",
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "center",
+      fontSize: "14vw",
+      position: "relative",
+      left: "15%",
+    },
+  },
+
+  shopNow: {
+    display: "flex",
+    justifyContent: "flex-end",
+    width: "100%",
+    alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      paddingRight: theme.spacing(5),
+      paddingTop: theme.spacing(5),
+    },
+  },
+
+  shopNowText: {
+    fontFamily: "Jost",
+  },
+
+  //About us
+
+  aboutUsSection: {
+    display: "flex",
+    justifyContent: "space-between",
+    paddingBottom: theme.spacing(15),
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: theme.spacing(10),
+    },
+  },
+  utsidebutikk: {
+    objectFit: "contain",
+    borderTopLeftRadius: "150px",
+    borderBottomLeftRadius: "150px",
+    width: "40%",
+    shapeOutside: "circle()",
+    [theme.breakpoints.down("xs")]: {
+      width: "40%",
+      // marginLeft: "2rem",
+    },
+  },
+  aboutUsTextContainer: {
     position: "relative",
-    textTransform: "uppercase",
+    left: "15%",
+    width: "50%",
+    [theme.breakpoints.down("xs")]: {
+      left: "8%",
+    },
+  },
+  aboutUsHeader: {
+    fontSize: "5vw",
+    fontFamily: "Roseritta",
+    textTransform: "none",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "10vw",
+    },
+  },
+  aboutParagraph: {
+    fontFamily: "Jost",
+  },
+
+  //Best sellers
+  gridContainer: {
+    maxWidth: "70%",
+    paddingTop: theme.spacing(5),
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: "90%",
+    },
+  },
+
+  root: {
+    maxWidth: "100%",
+    backgroundColor: "#F5FAFD",
+    cursor: "pointer",
+  },
+  media: {
+    height: "330px",
+    // 16:9
+    width: "100%",
+    borderTopLeftRadius: "150px",
+    borderTopRightRadius: "150px",
+    [theme.breakpoints.down("xs")]: {
+      height: "150px",
+    },
+  },
+
+  bestSellerSection: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    alignContent: "center",
+  },
+
+  cardContent: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexWrap: "wrap",
+    paddingTop: "5px",
+    paddingLeft: "0",
+    paddingRight: "0",
+  },
+
+  bodyText: {
+    fontFamily: "Jost",
+    fontSize: "12px",
+  },
+  shopNowBestSellers: {
+    display: "flex",
+    justifyContent: "flex-end",
+    width: "70%",
+    alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      paddingRight: theme.spacing(3),
+    },
+  },
+
+  contentStyle: {
+    height: "160px",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#364d79",
+  },
+
+  //Abonnement
+
+  sub: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingTop: theme.spacing(10),
+    paddingBottom: theme.spacing(10),
+  },
+
+  category: {
+    fontFamily: "Jost",
+    fontSize: "2vw",
+    borderBottom: "1px solid #121c25",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "5vw",
+    },
+  },
+  deliveryPrize: {
+    paddingTop: theme.spacing(2),
+    fontFamily: "Jost",
+    fontSize: "1vw",
     fontWeight: "bold",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "3vw",
+    },
   },
-
-  subHeader: {
-    paddingTop: "10px",
-    paddingBottom: theme.spacing(2),
-    fontFamily: "Lato",
-    fontSize: "16px",
-    lineHeight: "1.5",
-    color: "rgb(226, 226, 226)",
-    fontWeight: "300",
-    [theme.breakpoints.down("md")]: {},
-  },
-
-  buttonMain: {
-    bottom: "15%",
-    backgroundColor: "#FFFFFF",
-    fontFamily: "Lato",
-  },
-
-  largeCategoryContainer: {
+  subContainer: {
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    position: "relative",
-    [theme.breakpoints.up("xs")]: {
-      maxHeight: "207px",
-    },
-    [theme.breakpoints.up("md")]: {
-      paddingLeft: theme.spacing(2),
-      minHeight: "453px",
-    },
-    [theme.breakpoints.up("lg")]: {
-      maxHeight: "537px",
-    },
-  },
-
-  weddingImgContainer: {
-    width: "100%",
-    height: "100%",
-  },
-
-  weddingImg: {
-    objectFit: "cover",
-    width: "100%",
-    height: "100%",
-  },
-  weddingImgOverlay: {
-    top: "0",
-    position: "absolute",
-    width: "98%",
-    height: "100%",
-    background: "rgba(0, 0, 0, 0.5)",
-    color: "#FFFFFF",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    padding: theme.spacing(10),
-    [theme.breakpoints.down("sm")]: {
+    justifyContent: "space-between",
+    width: "50%",
+    [theme.breakpoints.down("xs")]: {
       width: "100%",
     },
   },
 
-  //Small card on frontpage
-  smallCardHeader: {
-    fontFamily: "Lato",
-    fontSize: "16px",
-    textTransform: "uppercase",
-    paddingTop: "20px",
-  },
-  smallMainHeader: {
-    fontFamily: "Playfair Display",
-    fontSize: "40px",
-    fontWeight: "bold",
-    flexWrap: "wrap",
-    [theme.breakpoints.up("lg")]: {},
-  },
-  smallCardParagraph: {
-    fontFamily: "Lato",
-    [theme.breakpoints.up("lg")]: {},
-  },
-
-  smallCategoriesContainer: {
+  //Newsletter
+  newsletter: {
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    position: "relative",
-    [theme.breakpoints.up("xs")]: {
-      paddingBottom: "20px",
-      maxHeight: "227px",
-    },
-    [theme.breakpoints.up("md")]: {
-      maxHeight: "381px",
-    },
-    [theme.breakpoints.up("lg")]: {},
+    backgroundColor: "#D0DAE3",
+    height: "300px",
+    padding: theme.spacing(5),
   },
-  smallCategoriesImg: {
-    height: "100%",
-    width: "100%",
-    objectFit: "cover",
-    // filter: "blur(2px)",
-  },
-
-  smallImgOverlayLeft: {
-    position: "absolute",
-    top: "0",
-    left: "0",
-    width: "97%",
-    height: "95%",
-    background: "rgba(0, 0, 0, 0.3)",
-    color: "#FFFFFF",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    [theme.breakpoints.down("md")]: {
-      height: "94%",
-      width: "96%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      height: "91%",
-      width: "98%",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "96%",
-    },
-  },
-  smallImgOverlayRight: {
-    position: "absolute",
-    top: "0",
-    width: "97%",
-    height: "95%",
-    background: "rgba(0, 0, 0, 0.5)",
-    color: "#FFFFFF",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    [theme.breakpoints.down("md")]: {
-      height: "94%",
-      width: "96%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      height: "91%",
-      width: "98%",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "94%",
-    },
-  },
-
-  //Bottom section
-
-  bottomSection: {
-    display: "flex",
-    width: "100%",
-    backgroundColor: "#2B2C38",
-    margin: "0",
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
-
-  bottomSectionHeader: {
-    paddingTop: theme.spacing(10),
-    paddingLeft: theme.spacing(5),
-    fontFamily: "Playfair Display",
-    color: "#EEECE7",
-    position: "relative",
-    textTransform: "uppercase",
-    fontSize: "45px",
-    width: "100%",
-    selfAlign: "flex-start",
-    margin: "0",
-  },
-  lowerBottomSectionHeader: {
-    paddingLeft: theme.spacing(8),
-    fontFamily: "Playfair Display",
-    color: "#EEECE7",
-    position: "relative",
-    textTransform: "uppercase",
-    fontSize: "45px",
-    width: "100%",
-    selfAlign: "flex-start",
-    margin: "0",
-  },
-
-  pBottom: {
-    paddingLeft: theme.spacing(8),
-    position: "relative",
-    fontFamily: "Lato",
-    color: "#EEECE7",
-    width: "90%",
-    fontSize: "18px",
-  },
-
-  rightBottomSection: {
-    width: "40%",
-    height: "70%",
-    objectFit: "contain",
-  },
-  leftBottomSection: {
-    height: "100%",
+  textDiv: {
     width: "50%",
+    paddingLeft: theme.spacing(10),
+  },
+  inputDiv: {
     display: "flex",
     flexDirection: "column",
+    width: "50%",
     alignContent: "center",
-    alignItems: "center",
+    paddingLeft: theme.spacing(20),
   },
+  input: {
+    height: "40px",
+    paddingLeft: theme.spacing(2),
+    width: "70%",
+  },
+  submitButton: {
+    width: "70%",
+  },
+  //Footer
 
   footer: {
+    display: "flex",
+    justifyContent: "space-around",
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(6),
-    height: "400px",
-    
+    backgroundColor: "#121c25",
+    backgroundColor: "#121c25",
   },
-  footerHeader: {
-    fontSize: "20px",
-    fontFamily: "Playfair display",
-    paddingBottom: theme.spacing(5),
-  },
+
   footerText: {
-    fontSize: "16px",
+    fontSize: "14px",
     fontFamily: "Lato",
     paddingBottom: theme.spacing(3),
+    color: "#D0DAE3",
   },
   nyhetsbrevField: {
     fontSize: "16px",
     fontFamily: "Lato",
     paddingTop: theme.spacing(2),
+  },
+  logoDiv: {
+    display: "flex",
+    flexDirection: "column",
+    paddingLeft: theme.spacing(5),
+  },
+  footerLogo: {
+    fontFamily: "Roseritta",
+    color: "#F8F8F9",
+    fontSize: "30px",
+  },
+  footerList: {
+    "& li": {
+      listStyle: "none",
+      textDecoration: "none",
+      fontWeight: "bold",
+      cursor: "pointer",
+    },
+    socialsButtonFooter: {
+      color: "#D0DAE3",
+    },
   },
 }));

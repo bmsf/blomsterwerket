@@ -5,7 +5,7 @@ import "typeface-heebo";
 export default makeStyles((theme) => ({
   root: {
     maxWidth: "100%",
-    backgroundColor: "#FEEFE9",
+    backgroundColor: "#F5FAFD",
     borderRadius: "0",
     cursor: "pointer",
   },

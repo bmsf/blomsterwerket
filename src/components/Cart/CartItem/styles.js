@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     minHeight: "150px",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#F5FAFD",
   },
   cardContent: {
     display: "flex",
@@ -17,7 +17,7 @@ export default makeStyles((theme) => ({
   },
   cardActions: {
     justifyContent: "space-between",
-    fontFamily: "Playfair display",
+    fontFamily: "Jost",
     padding: theme.spacing(2),
   },
   buttons: {
@@ -27,12 +27,11 @@ export default makeStyles((theme) => ({
   },
 
   itemName: {
-    fontFamily: "Playfair display",
+    fontFamily: "Jost",
     fontSize: "20px",
     padding: theme.spacing(3),
   },
   removeItemButton: {
-    fontFamily: "Lato",
-    fontWeight: "bold",
+    fontFamily: "Jost",
   },
 }));

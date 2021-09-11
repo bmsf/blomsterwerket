@@ -7,14 +7,9 @@ import {
   Badge,
   Typography,
   InputBase,
+  useMediaQuery,
 } from "@material-ui/core";
-import {
-  Menu,
-  Search,
-  Facebook,
-  Instagram,
-  LocalMallSharp,
-} from "@material-ui/icons";
+import { LocalMallOutlined, Menu } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
 import useStyles from "./styles";
@@ -22,37 +17,40 @@ import useStyles from "./styles";
 const Navbar = ({ totalItems }) => {
   const classes = useStyles();
   // const location = useLocation();
-
-  const [searchButton, setSearchButton] = useState(false);
+  // const isMobile = useMediaQuery(theme.breakpoints.down("xs"))
 
   return (
     <>
       <AppBar position="fixed" className={classes.appBar} color="inherit">
-        <Toolbar>
-          <div className={classes.button}>
-            <IconButton
-              component={Link}
-              to="/"
-              aria-label="Menu button"
-              color="inherit"
+        <Toolbar className={classes.toolBar}>
+          <IconButton>
+            <Menu className={classes.menuButton} />
+          </IconButton>
+
+          <div className={classes.logoDivMobile}>
+            <Typography
+              variant="h4"
+              style={{
+                fontFamily: "Roseritta",
+                fontWeight: "bold",
+                margin: "0",
+                padding: "0",
+              }}
             >
-              <Menu className={classes.menuButton} />
-              <Facebook
-                className={classes.socialButton}
-                target="_blank"
-                href="https://www.facebook.com/pages/category/Florist/Blomster-Werket-103013615165959/"
-              />
-            </IconButton>
-            <IconButton aria-label="Instagram button">
-              <Instagram
-                className={classes.socialButton}
-                target="_blank"
-                href="https://www.instagram.com/blomsterwerket/s"
-              />
-            </IconButton>
+              B
+            </Typography>
+            <Typography
+              variant="h4"
+              style={{
+                fontFamily: "Roseritta",
+                fontWeight: "bold",
+                position: "relative",
+                top: "8px",
+              }}
+            >
+              W
+            </Typography>
           </div>
-          <div className={classes.grow} />
-          <Typography className={classes.title}>Blomster werket</Typography>
           <nav className={classes.desktopNav}>
             <ul className={classes.navLinks}>
               <li>
@@ -62,57 +60,56 @@ const Navbar = ({ totalItems }) => {
               </li>
               <li>
                 <Link to="/shop" className={classes.aTags}>
-                  Nettbutikk
+                  Butikk
                 </Link>
               </li>
+
+              {/* <img src={logogreen} className={classes.logo} /> */}
+              <div className={classes.logoDiv}>
+                <Typography
+                  variant="h4"
+                  style={{
+                    fontFamily: "Roseritta",
+                    fontWeight: "bold",
+                    margin: "0",
+                    padding: "0",
+                  }}
+                >
+                  B
+                </Typography>
+                <Typography
+                  variant="h4"
+                  style={{
+                    fontFamily: "Roseritta",
+                    fontWeight: "bold",
+                    paddingTop: "10px",
+                  }}
+                >
+                  W
+                </Typography>
+              </div>
+
               <li>
                 <Link to="/anledninger" className={classes.aTags}>
-                  Bryllup
+                  Anledninger
                 </Link>
               </li>
               <li>
                 <Link to="/svar" className={classes.aTags}>
-                  Ofte stilte spørsmål
+                  Spørsmål
                 </Link>
               </li>
             </ul>
           </nav>
-          {searchButton ? (
-            <div className={classes.button}>
-              <IconButton
-                onClick={() => setSearchButton(false)}
-                aria-label="Search button"
-                color="inherit"
-              >
-                <Search className={classes.searchBar} />
-              </IconButton>
-            </div>
-          ) : (
-            <div className={classes.button}>
-              <div className={classes.search}>
-                <div className={classes.searchIcon}>
-                  <Search />
-                </div>
-                <InputBase
-                  placeholder="Søk…"
-                  classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput,
-                  }}
-                  inputProps={{ "aria-label": "search" }}
-                />
-              </div>
-            </div>
-          )}
-          <div className={classes.button}>
+          <div className={classes.cartButton}>
             <IconButton
               component={Link}
               to="/cart"
               aria-label="Show cart items"
               color="inherit"
             >
-              <Badge badgeContent={totalItems} color="secondary">
-                <LocalMallSharp />
+              <Badge badgeContent={totalItems} color="primary">
+                <LocalMallOutlined />
               </Badge>
             </IconButton>
           </div>
