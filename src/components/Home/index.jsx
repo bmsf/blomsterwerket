@@ -22,14 +22,14 @@ import wedding from "../../assets/wedding.jpeg";
 
 import bestseller2 from "../../assets/bestseller2.png";
 import bestseller3 from "../../assets/bestseller3.png";
-import utsidebutikk from "../../assets/utsidebutikk.png";
+import utsidebutikk from "../../assets/roundedstore.png";
 import rounded from "../../assets/roundedbig.png";
 
 import "../../index.css";
 
 import useStyles from "./styles";
 
-const Home = ({ handleEmptyCart }) => {
+const Home = () => {
   const classes = useStyles();
 
   return (
@@ -72,15 +72,16 @@ const Home = ({ handleEmptyCart }) => {
             <Typography className={classes.headerFrontpage} variant="h1">
               Werket
             </Typography>
-            <div className={classes.shopNow}>
-              <Typography variant="h6" className={classes.shopNowText}>
-                Handle nå
-              </Typography>
-              <a class="link" href="./">
+            <div>
+              <Link className={classes.shopNow} to="/shop">
                 <IconButton>
+                  <Typography variant="h6" className={classes.shopNowText}>
+                    Handle nå
+                  </Typography>
+
                   <ArrowRightAlt />
                 </IconButton>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -141,20 +142,20 @@ const Home = ({ handleEmptyCart }) => {
             </Card>
           </Grid>
         </Grid>
-        <div className={classes.shopNowBestSellers}>
-          <Typography
-            variant="h6"
-            className={classes.shopNowText}
-            style={{ fontSize: "12px" }}
-          >
-            Handle nå
-          </Typography>
-          <a class="link" href="./">
-            <IconButton>
-              <ArrowRightAlt />
-            </IconButton>
-          </a>
-        </div>
+
+        <Link className={classes.shopNowBestSellers} to="/shop">
+          <IconButton>
+            <Typography
+              variant="h6"
+              className={classes.shopNowText}
+              style={{ fontSize: "12px" }}
+            >
+              Handle nå
+            </Typography>
+
+            <ArrowRightAlt />
+          </IconButton>
+        </Link>
       </div>
       <div className={classes.sub}>
         <Typography className={classes.aboutUsHeader}>Subscriptions</Typography>
@@ -264,7 +265,7 @@ const Home = ({ handleEmptyCart }) => {
           <Typography className={classes.footerLogo}>Blomster</Typography>
           <Typography className={classes.footerLogo}>Werket</Typography>
         </div>
-        <div className={classes.footerDiv}>
+        <div className={classes.logoDiv}>
           <ul className={classes.footerList}>
             <li>
               <a className={classes.footerText} href="./">
@@ -283,6 +284,7 @@ const Home = ({ handleEmptyCart }) => {
             </li>
           </ul>
         </div>
+
         <div className={classes.logoDiv}>
           <ul className={classes.footerList}>
             <li>
@@ -291,23 +293,33 @@ const Home = ({ handleEmptyCart }) => {
               </a>
             </li>
             <li>
-              <a className={classes.footerText} href="./">FAQ</a>
+              <a className={classes.footerText} href="./">
+                FAQ
+              </a>
             </li>
             <li>
-              <a className={classes.footerText} href="./">Subscriptions</a>
+              <a className={classes.footerText} href="./">
+                Subscriptions
+              </a>
             </li>
           </ul>
         </div>
         <div className={classes.logoDiv}>
           <ul className={classes.footerList}>
             <li>
-              <a className={classes.footerText} href="./">Contact</a>
+              <a className={classes.footerText} href="./">
+                Contact
+              </a>
             </li>
             <li>
-              <a className={classes.footerText} href="./">+47 000 00 00</a>
+              <a className={classes.footerText} href="./">
+                +47 000 00 00
+              </a>
             </li>
             <li>
-              <a className={classes.footerText} href="./">info@bw.com</a>
+              <a className={classes.footerText} href="./">
+                info@bw.com
+              </a>
             </li>
           </ul>
         </div>

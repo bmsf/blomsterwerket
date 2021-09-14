@@ -10,9 +10,14 @@ export default makeStyles((theme) => ({
     cursor: "pointer",
   },
   media: {
-    height: 0,
-    paddingTop: "56.25%", // 16:9
+    height: "330px",
+    // 16:9
     width: "100%",
+    borderTopLeftRadius: "150px",
+    borderTopRightRadius: "150px",
+    [theme.breakpoints.down("xs")]: {
+      height: "250px",
+    }
   },
   cardActions: {
     display: "flex",
@@ -27,7 +32,7 @@ export default makeStyles((theme) => ({
     flexWrap: "wrap",
   },
   header: {
-    fontFamily: "Playfair Display",
+    fontFamily: "Roseritta",
     fontSize: "20px",
     fontWeight: "400",
   },
@@ -59,7 +64,7 @@ export default makeStyles((theme) => ({
     alignSelf: "flex-start",
   },
   bodyText: {
-    fontFamily: "Lato",
+    fontFamily: "Jost",
     fontSize: "14px",
   },
   confirmationBox: {

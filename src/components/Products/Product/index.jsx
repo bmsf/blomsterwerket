@@ -14,6 +14,7 @@ import { Check } from "@material-ui/icons";
 import useStyles from "./styles";
 
 const Product = ({ product, onAddToCart }) => {
+  console.log(product);
   const classes = useStyles();
 
   const [buyButton, setBuyButton] = useState(true);

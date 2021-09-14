@@ -4,7 +4,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color: #121c25;
+  color: #131c25;
 }
 
 @font-face {
@@ -35,4 +35,3 @@ section {
 a {
   text-decoration: none;
 }
-

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Cart from "./components/Cart/index";
 import Navbar from "./components/Navbar/index";
 import Products from "./components/Products/index";
+import ProductInfo from "./components/ProductInfo/index";
 import Checkout from "./components/CheckoutForm/Checkout/index";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
@@ -12,6 +13,7 @@ import Svar from "./components/Svar";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Anledninger from "./pages/anledninger";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -60,6 +62,12 @@ const App = () => {
   //Material UI Theme
 
   const theme = createMuiTheme({
+    typography: {
+      h3: { fontFamily: "Roseritta" },
+      h6: { fontFamily: "Jost" },
+      body1: { fontFamily: "Jost", fontWeight: "300" },
+      body2: { fontFamily: "Jost", fontWeight: "400" },
+    },
     palette: {
       primary: {
         main: "#121c25",
@@ -93,7 +101,9 @@ const App = () => {
                 totalProducts={products.length}
               />
             </Route>
-            <Route exact path="/anledninger"></Route>
+            <Route exact path="/anledninger">
+              <Anledninger />
+            </Route>
             <Route exact path="/svar">
               <Svar />
             </Route>
@@ -107,6 +117,9 @@ const App = () => {
             </Route>
             <Route exact path="/checkout">
               <Checkout cart={cart} />
+            </Route>
+            <Route path="/productinfo/:id">
+              <ProductInfo />
             </Route>
           </Switch>
         </div>

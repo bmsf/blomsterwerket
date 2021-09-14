@@ -3,23 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
 
-  root: {
-    flexGrow: 1,
-  },
   main: {
     backgroundColor: "#F5FAFD",
     margin: "0",
     padding: "0",
     width: "100%",
     height: "100vh",
-  },
-
-  wrapper: {
-    maxWidth: "2000px",
-    paddingTop: "20px",
-    [theme.breakpoints.up("md")]: {
-      padding: "50px",
-    },
   },
 
   //Frontpage top section
@@ -30,7 +19,6 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column",
       alignItems: "center",
-      paddingTop: theme.spacing(3),
     },
   },
 
@@ -53,7 +41,7 @@ export default makeStyles((theme) => ({
     objectFit: "contain",
     paddingBottom: theme.spacing(10),
     [theme.breakpoints.down("xs")]: {
-      minWidth: "35%",
+      minWidth: "40%",
       paddingBottom: theme.spacing(5),
     },
   },
@@ -74,8 +62,8 @@ export default makeStyles((theme) => ({
     fontSize: "8vw",
     fontFamily: "Roseritta",
     textTransform: "none",
-    [theme.breakpoints.down("md")]: {
-      fontSize: "14vw",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "12vw",
       justifyContent: "center",
       margin: "0",
     },
@@ -86,9 +74,9 @@ export default makeStyles((theme) => ({
     fontSize: "8vw",
     fontFamily: "Roseritta",
     textTransform: "none",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
-      fontSize: "14vw",
+      fontSize: "12vw",
       position: "relative",
       left: "15%",
     },
@@ -121,21 +109,27 @@ export default makeStyles((theme) => ({
   },
   utsidebutikk: {
     objectFit: "contain",
-    borderTopLeftRadius: "150px",
-    borderBottomLeftRadius: "150px",
-    width: "30%",
-    shapeOutside: "circle()",
+    width: "40%",
+    shapeOutside: "circle(50%)",
+    [theme.breakpoints.down("md")]: {
+      width: "35%",
+    },
     [theme.breakpoints.down("xs")]: {
-      width: "40%",
-      // marginLeft: "2rem",
+      width: "43%",
     },
   },
   aboutUsTextContainer: {
     position: "relative",
     left: "15%",
     width: "50%",
+    [theme.breakpoints.down("md")]: {
+      left: "13%",
+    },
     [theme.breakpoints.down("xs")]: {
       left: "8%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "40%",
     },
   },
   aboutUsHeader: {
@@ -143,7 +137,7 @@ export default makeStyles((theme) => ({
     fontFamily: "Roseritta",
     textTransform: "none",
     [theme.breakpoints.down("xs")]: {
-      fontSize: "10vw",
+      fontSize: "8vw",
     },
   },
   aboutParagraph: {
@@ -152,18 +146,19 @@ export default makeStyles((theme) => ({
 
   //Best sellers
   gridContainer: {
-    maxWidth: "70%",
+    maxWidth: "65%",
     paddingTop: theme.spacing(5),
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       maxWidth: "90%",
     },
   },
 
-  // root: {
-  //   maxWidth: "100%",
-  //   backgroundColor: "#F5FAFD",
-  //   cursor: "pointer",
-  // },
+  root: {
+    maxWidth: "100%",
+    backgroundColor: "#F5FAFD",
+    cursor: "pointer",
+    margin: "10px",
+  },
   media: {
     height: "330px",
     // 16:9
@@ -172,6 +167,15 @@ export default makeStyles((theme) => ({
     borderTopRightRadius: "150px",
     [theme.breakpoints.down("xs")]: {
       height: "150px",
+    },
+    [theme.breakpoints.up("sm")]: {
+      height: "200px",
+    },
+    [theme.breakpoints.up("md")]: {
+      height: "250px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: "330px",
     },
   },
 
@@ -260,8 +264,11 @@ export default makeStyles((theme) => ({
     padding: theme.spacing(5),
   },
   textDiv: {
-    width: "50%",
+    maxWidth: "50%",
     paddingLeft: theme.spacing(10),
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "0",
+    },
   },
   inputDiv: {
     display: "flex",
@@ -269,14 +276,24 @@ export default makeStyles((theme) => ({
     width: "50%",
     alignContent: "center",
     paddingLeft: theme.spacing(20),
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+      paddingLeft: theme.spacing(5),
+    },
   },
   input: {
     height: "40px",
     paddingLeft: theme.spacing(2),
     width: "70%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   submitButton: {
     width: "70%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   //Footer
 
@@ -285,7 +302,16 @@ export default makeStyles((theme) => ({
     justifyContent: "space-around",
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(6),
-    backgroundColor: "#121c25",
+    backgroundColor: "#131c25",
+    [theme.breakpoints.down("xs")]: {
+      alignItems: "center",
+    },
+  },
+  logoDiv: {
+    display: "flex",
+    flexDirection: "column",
+    paddingLeft: theme.spacing(5),
+    [theme.breakpoints.down("xs")]: {},
   },
 
   footerText: {
@@ -299,25 +325,26 @@ export default makeStyles((theme) => ({
     fontFamily: "Lato",
     paddingTop: theme.spacing(2),
   },
-  logoDiv: {
-    display: "flex",
-    flexDirection: "column",
-    paddingLeft: theme.spacing(5),
-  },
+
   footerLogo: {
     fontFamily: "Roseritta",
     color: "#F8F8F9",
     fontSize: "30px",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
   footerList: {
+    padding: "0",
+
     "& li": {
       listStyle: "none",
       textDecoration: "none",
       fontWeight: "bold",
       cursor: "pointer",
     },
-    socialsButtonFooter: {
-      color: "#D0DAE3",
+    socialButtonsFooter: {
+      display: "none",
     },
   },
 }));

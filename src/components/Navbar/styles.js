@@ -57,7 +57,7 @@ export default makeStyles((theme) => ({
     },
   },
   aTags: {
-    color: "#282B31",
+    color: "#131c25",
     fontFamily: "Jost",
   },
 

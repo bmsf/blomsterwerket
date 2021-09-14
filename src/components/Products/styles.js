@@ -18,7 +18,7 @@ export default makeStyles((theme) => ({
     width: "100%",
   },
   wrapper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(5),
     [theme.breakpoints.down("xs")]: {
       padding: theme.spacing(2),
     },
@@ -30,9 +30,8 @@ export default makeStyles((theme) => ({
   },
 
   header: {
-    fontFamily: "Playfair Display",
+    fontFamily: "Roseritta",
     fontSize: "20px",
-    fontWeight: "400",
     paddingBottom: theme.spacing(3),
   },
 }));

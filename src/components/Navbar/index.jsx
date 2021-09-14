@@ -6,7 +6,6 @@ import {
   IconButton,
   Badge,
   Typography,
- 
 } from "@material-ui/core";
 import { LocalMallOutlined, Menu } from "@material-ui/icons";
 import { Link } from "react-router-dom";
@@ -54,7 +53,7 @@ const Navbar = ({ totalItems }) => {
             <ul className={classes.navLinks}>
               <li>
                 <Link to="/" className={classes.aTags}>
-                  Home
+                  Hjem
                 </Link>
               </li>
               <li>
