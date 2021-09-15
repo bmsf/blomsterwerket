@@ -11,10 +11,10 @@ import {
   // Button,
 } from "@material-ui/core";
 import { Check } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 import useStyles from "./styles";
 
 const Product = ({ product, onAddToCart }) => {
-  console.log(product);
   const classes = useStyles();
 
   const [buyButton, setBuyButton] = useState(true);
@@ -52,30 +52,32 @@ const Product = ({ product, onAddToCart }) => {
   };
 
   return (
-    <Card className={classes.root} elevation="0">
-      <CardMedia
-        className={classes.media}
-        image={product.media.source}
-        title={product.name}
-      />
-      <CardContent>
-        <div className={classes.cardContent}>
-          <Typography className={classes.header} gutterBottom>
-            {product.name}
-          </Typography>
-        </div>
-        <Divider variant="middle" />
-        <div className={classes.cardContent}>
-          <Typography
-            className={classes.bodyText}
-            dangerouslySetInnerHTML={{ __html: product.description }}
-          />
-        </div>
-      </CardContent>
-      <CardActions disableSpacing className={classes.cardActions}>
-        {buyButton ? <FilledButton /> : <ConfirmationButton />}
-      </CardActions>
-    </Card>
+    <Link to={`/productinfo/${product.id}`}>
+      <Card className={classes.root} elevation="0">
+        <CardMedia
+          className={classes.media}
+          image={product.media.source}
+          title={product.name}
+        />
+        <CardContent>
+          <div className={classes.cardContent}>
+            <Typography className={classes.header} gutterBottom>
+              {product.name}
+            </Typography>
+          </div>
+          <Divider variant="middle" />
+          <div className={classes.cardContent}>
+            <Typography
+              className={classes.bodyText}
+              dangerouslySetInnerHTML={{ __html: product.description }}
+            />
+          </div>
+        </CardContent>
+        <CardActions disableSpacing className={classes.cardActions}>
+          {buyButton ? <FilledButton /> : <ConfirmationButton />}
+        </CardActions>
+      </Card>
+    </Link>
   );
 };
 

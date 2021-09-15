@@ -23,6 +23,7 @@ const App = () => {
     const { data } = await commerce.products.list();
 
     setProducts(data);
+    return { data };
   };
 
   const fetchCart = async () => {
@@ -119,7 +120,7 @@ const App = () => {
               <Checkout cart={cart} />
             </Route>
             <Route path="/productinfo/:id">
-              <ProductInfo />
+              <ProductInfo products={products} />
             </Route>
           </Switch>
         </div>

@@ -13,6 +13,7 @@ import { HomeOutlined } from "@ant-design/icons";
 import useStyles from "./styles";
 import bestseller from "../../assets/bestseller1.png";
 import { useParams } from "react-router-dom";
+import fetchProducts from "../../App";
 
 const ProductInfo = () => {
   const [checked, setChecked] = useState(true);
@@ -23,6 +24,7 @@ const ProductInfo = () => {
   const classes = useStyles();
 
   const { id } = useParams();
+  // const { data: product } = fetchProducts();
 
   return (
     <Container>
@@ -50,7 +52,11 @@ const ProductInfo = () => {
 
       <div className={classes.container}>
         <div className={classes.infoContainer}>
-          <img src={bestseller} className={classes.infoImg} alt="bilde av vare"/>
+          <img
+            src={bestseller}
+            className={classes.infoImg}
+            alt="bilde av vare"
+          />
         </div>
         <div className={classes.infoContainer}>
           <Typography
@@ -59,7 +65,7 @@ const ProductInfo = () => {
               fontSize: "3rem",
             }}
           >
-            Sweet Embrace
+            Product
           </Typography>
           <Typography
             style={{

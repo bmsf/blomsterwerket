@@ -26,9 +26,7 @@ const Products = ({
         <Grid container justify="center" spacing={5}>
           {products.map((product) => (
             <Grid item key={product.id} xs={6} sm={6} md={4} lg={3}>
-              <Link to="./">
-                <Product product={product} onAddToCart={onAddToCart} />
-              </Link>
+              <Product product={product} onAddToCart={onAddToCart} />
             </Grid>
           ))}
         </Grid>

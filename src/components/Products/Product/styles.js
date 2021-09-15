@@ -7,7 +7,6 @@ export default makeStyles((theme) => ({
     maxWidth: "100%",
     backgroundColor: "#F5FAFD",
     borderRadius: "0",
-    cursor: "pointer",
   },
   media: {
     height: "330px",
@@ -17,7 +16,7 @@ export default makeStyles((theme) => ({
     borderTopRightRadius: "150px",
     [theme.breakpoints.down("xs")]: {
       height: "250px",
-    }
+    },
   },
   cardActions: {
     display: "flex",
