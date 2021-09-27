@@ -52,13 +52,17 @@ const Product = ({ product, onAddToCart }) => {
   };
 
   return (
-    <Link to={`/productinfo/${product.id}`}>
-      <Card className={classes.root} elevation="0">
+    <Card className={classes.root} elevation={0}>
+      <Link to={`/productinfo/${product.id}`}>
         <CardMedia
           className={classes.media}
           image={product.media.source}
           title={product.name}
-        />
+        >
+          {" "}
+          <Typography className={classes.hoverDiv}>MER INFORMASJON</Typography>
+        </CardMedia>
+
         <CardContent>
           <div className={classes.cardContent}>
             <Typography className={classes.header} gutterBottom>
@@ -73,11 +77,11 @@ const Product = ({ product, onAddToCart }) => {
             />
           </div>
         </CardContent>
-        <CardActions disableSpacing className={classes.cardActions}>
-          {buyButton ? <FilledButton /> : <ConfirmationButton />}
-        </CardActions>
-      </Card>
-    </Link>
+      </Link>
+      <CardActions disableSpacing className={classes.cardActions}>
+        {buyButton ? <FilledButton /> : <ConfirmationButton />}
+      </CardActions>
+    </Card>
   );
 };
 

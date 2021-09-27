@@ -9,19 +9,36 @@ export default makeStyles((theme) => ({
     borderRadius: "0",
   },
   media: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     height: "330px",
-    // 16:9
     width: "100%",
     borderTopLeftRadius: "150px",
     borderTopRightRadius: "150px",
+
+    "&:hover": {
+      transition: "opacity 500ms ease",
+      borderRadius: "0",
+      "& $hoverDiv": {
+        display: "inline",
+        fontFamily: "Roseritta",
+        fontSize: "18px",
+        fontWeight: "400",
+        color: "white",
+        padding: theme.spacing(0.5),
+      },
+    },
     [theme.breakpoints.down("xs")]: {
       height: "250px",
     },
   },
+  hoverDiv: { display: "none", backgroundColor: "black" },
   cardActions: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
+    cursor: "pointer",
   },
   cardContent: {
     display: "flex",
@@ -54,6 +71,9 @@ export default makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     "&:hover": {
       background: "linear-gradient(135deg, #b0dae6, #ffd6c7 60%, #ffd6c7)",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
     },
   },
 

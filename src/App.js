@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
-import Cart from "./components/Cart/index";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart/index";
+import Store from "./pages/Store/index";
+import ProductInfo from "./pages/ProductInfo/index";
+
 import Navbar from "./components/Navbar/index";
-import Products from "./components/Products/index";
-import ProductInfo from "./components/ProductInfo/index";
 import Checkout from "./components/CheckoutForm/Checkout/index";
+// import Footer from "./components/Footer/index";
+
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 import { commerce } from "./lib/commerce";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Svar from "./components/Svar";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Anledninger from "./pages/anledninger";
+import InfoBar from "./components/InfoBar";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -23,7 +25,6 @@ const App = () => {
     const { data } = await commerce.products.list();
 
     setProducts(data);
-    return { data };
   };
 
   const fetchCart = async () => {
@@ -57,7 +58,7 @@ const App = () => {
   useEffect(() => {
     fetchProducts();
     fetchCart();
-    Aos.init({ startEvent: "load", once: false });
+    Aos.init();
   }, []);
 
   //Material UI Theme
@@ -90,24 +91,26 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Router>
         <div className="app">
+          <InfoBar />
           <Navbar totalItems={cart.total_items} />
           <Switch>
             <Route exact path="/">
               <Home handleEmptyCart={handleEmptyCart} />
             </Route>
             <Route exact path="/shop">
-              <Products
+              <Store
                 products={products}
                 onAddToCart={handleAddToCart}
                 totalProducts={products.length}
               />
+              <Route path="/productinfo/:id">
+                <ProductInfo />
+              </Route>
             </Route>
-            <Route exact path="/anledninger">
+            {/* <Route exact path="/anledninger">
               <Anledninger />
-            </Route>
-            <Route exact path="/svar">
-              <Svar />
-            </Route>
+            </Route> */}
+            <Route exact path="/"></Route>
             <Route exact path="/cart">
               <Cart
                 cart={cart}
@@ -119,10 +122,8 @@ const App = () => {
             <Route exact path="/checkout">
               <Checkout cart={cart} />
             </Route>
-            <Route path="/productinfo/:id">
-              <ProductInfo products={products} />
-            </Route>
           </Switch>
+          {/* <Footer /> */}
         </div>
       </Router>
     </ThemeProvider>

@@ -1,34 +1,19 @@
-import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import Phone from "@material-ui/icons/Phone";
 
 import useStyles from "./styles";
+import { Divider } from "@material-ui/core";
 
 const InfoBar = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="fixed">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
+    <div className={classes.div}>
+      <div className={classes.text}>ÅPNINGSTIDER: MAN-ONS: 10.00-16.30</div>
+      <Divider orientation="vertical" light />
+      <div className={classes.text}>TORS-FRE: 10.00-18.00</div>
+      <Divider orientation="vertical" />
+      <div className={classes.text}>LØR: 10.00-15.30</div>
+      <Phone className={classes.phone} />
     </div>
   );
 };

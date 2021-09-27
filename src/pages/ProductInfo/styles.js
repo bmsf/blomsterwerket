@@ -21,10 +21,22 @@ export default makeStyles((theme) => ({
     objectFit: "contain",
     width: "50%",
     alignSelf: "center",
+    borderTopLeftRadius: "150px",
+    borderTopRightRadius: "150px",
   },
   infoContainer: {
     display: "flex",
     flexDirection: "column",
     width: "50%",
+    gap: "10px",
+  },
+  checkBox: {
+    display: "flex",
+    justifyContent: "flex-start",
+    position: "relative",
+    right: "2%",
+  },
+  buyNow: {
+    width: "30%",
   },
 }));

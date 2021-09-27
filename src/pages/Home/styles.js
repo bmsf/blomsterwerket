@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     margin: "0",
     padding: "0",
     width: "100%",
-    height: "100vh",
+    height: "100%",
   },
 
   //Frontpage top section
@@ -62,8 +62,8 @@ export default makeStyles((theme) => ({
     fontSize: "8vw",
     fontFamily: "Roseritta",
     textTransform: "none",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "12vw",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "10vw",
       justifyContent: "center",
       margin: "0",
     },
@@ -74,7 +74,7 @@ export default makeStyles((theme) => ({
     fontSize: "8vw",
     fontFamily: "Roseritta",
     textTransform: "none",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       justifyContent: "center",
       fontSize: "12vw",
       position: "relative",
@@ -88,8 +88,8 @@ export default makeStyles((theme) => ({
     width: "100%",
     alignItems: "center",
     [theme.breakpoints.down("xs")]: {
-      paddingRight: theme.spacing(5),
-      paddingTop: theme.spacing(5),
+      paddingRight: theme.spacing(7),
+      paddingTop: theme.spacing(2),
     },
   },
 
@@ -110,7 +110,9 @@ export default makeStyles((theme) => ({
   utsidebutikk: {
     objectFit: "contain",
     width: "40%",
-    shapeOutside: "circle(50%)",
+
+    borderTopLeftRadius: "500px",
+    borderBottomLeftRadius: "500px",
     [theme.breakpoints.down("md")]: {
       width: "35%",
     },
@@ -296,55 +298,4 @@ export default makeStyles((theme) => ({
     },
   },
   //Footer
-
-  footer: {
-    display: "flex",
-    justifyContent: "space-around",
-    paddingTop: theme.spacing(6),
-    paddingBottom: theme.spacing(6),
-    backgroundColor: "#131c25",
-    [theme.breakpoints.down("xs")]: {
-      alignItems: "center",
-    },
-  },
-  logoDiv: {
-    display: "flex",
-    flexDirection: "column",
-    paddingLeft: theme.spacing(5),
-    [theme.breakpoints.down("xs")]: {},
-  },
-
-  footerText: {
-    fontSize: "14px",
-    fontFamily: "Lato",
-    paddingBottom: theme.spacing(3),
-    color: "#D0DAE3",
-  },
-  nyhetsbrevField: {
-    fontSize: "16px",
-    fontFamily: "Lato",
-    paddingTop: theme.spacing(2),
-  },
-
-  footerLogo: {
-    fontFamily: "Roseritta",
-    color: "#F8F8F9",
-    fontSize: "30px",
-    [theme.breakpoints.down("xs")]: {
-      display: "none",
-    },
-  },
-  footerList: {
-    padding: "0",
-
-    "& li": {
-      listStyle: "none",
-      textDecoration: "none",
-      fontWeight: "bold",
-      cursor: "pointer",
-    },
-    socialButtonsFooter: {
-      display: "none",
-    },
-  },
 }));

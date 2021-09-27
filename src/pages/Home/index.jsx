@@ -9,12 +9,7 @@ import {
   CardContent,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import {
-  Facebook,
-  Instagram,
-  ArrowRightAlt,
-  Twitter,
-} from "@material-ui/icons";
+import { Facebook, Instagram, ArrowRightAlt } from "@material-ui/icons";
 
 import { Input } from "antd";
 
@@ -22,8 +17,8 @@ import wedding from "../../assets/wedding.jpeg";
 
 import bestseller2 from "../../assets/bestseller2.png";
 import bestseller3 from "../../assets/bestseller3.png";
-import utsidebutikk from "../../assets/roundedstore.png";
 import rounded from "../../assets/roundedbig.png";
+import omoss2 from "../../assets/omoss.jpeg";
 
 import "../../index.css";
 
@@ -38,24 +33,23 @@ const Home = () => {
       <div className={classes.frontPageDiv}>
         <div className={classes.socialButtons}>
           <IconButton
-            component={Link}
-            to="/"
             aria-label="Menu button"
             color="inherit"
+            onClick={() =>
+              window.open(
+                "https://www.facebook.com/pg/Blomster-Werket-103013615165959/posts/"
+              )
+            }
           >
-            <Facebook
-              className={classes.socialButton}
-              target="_blank"
-              href="https://www.facebook.com/pages/category/Florist/Blomster-Werket-103013615165959/"
-            />
+            <Facebook className={classes.socialButton} />
           </IconButton>
-
-          <IconButton aria-label="Instagram button">
-            <Instagram
-              className={classes.socialButton}
-              target="_blank"
-              href="https://www.instagram.com/blomsterwerket/s"
-            />
+          <IconButton
+            aria-label="Instagram button"
+            onClick={() =>
+              window.open("https://www.instagram.com/blomsterwerket/")
+            }
+          >
+            <Instagram className={classes.socialButton} />
           </IconButton>
         </div>
         <div className={classes.root} />
@@ -87,10 +81,24 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={classes.aboutUsSection}>
+      <div
+        className={classes.aboutUsSection}
+        data-aos="fade-up"
+        data-aos-delay="800"
+      >
         <div className={classes.aboutUsTextContainer}>
-          <Typography className={classes.aboutUsHeader}>About us</Typography>
-          <Typography className={classes.aboutParagraph}>
+          <Typography
+            className={classes.aboutUsHeader}
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
+            About us
+          </Typography>
+          <Typography
+            className={classes.aboutParagraph}
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
             We pride ourselves on sourcing on-trend flowers and creating
             one-of-a-kind arrangements you wont`t find anywhere else. We work
             with the best-in-class designers to offer stunning bouquets and
@@ -101,15 +109,31 @@ const Home = () => {
           </Typography>
         </div>
         <img
-          src={utsidebutikk}
+          src={omoss2}
           className={classes.utsidebutikk}
           alt="Bilde av butikken utvendig"
+          // data-aos="fade-left"
+          // data-aos-delay="800"
         />
       </div>
       <div className={classes.bestSellerSection}>
-        <Typography className={classes.aboutUsHeader}>Best sellers</Typography>
+        <Typography
+          className={classes.aboutUsHeader}
+          data-aos="fade-up"
+          data-aos-delay="800"
+        >
+          Best sellers
+        </Typography>
         <Grid container className={classes.gridContainer} spacing={3}>
-          <Grid item lg={4} md={4} sm={4} xs={4}>
+          <Grid
+            item
+            lg={4}
+            md={4}
+            sm={4}
+            xs={4}
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
             <Card className={classes.root} elevation="0">
               <CardMedia className={classes.media} image={wedding} />
               <CardContent className={classes.cardContent}>
@@ -120,7 +144,15 @@ const Home = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item lg={4} md={4} sm={4} xs={4}>
+          <Grid
+            item
+            lg={4}
+            md={4}
+            sm={4}
+            xs={4}
+            data-aos="fade-up"
+            data-aos-delay="1500"
+          >
             <Card className={classes.root} elevation="0">
               <CardMedia className={classes.media} image={bestseller2} />
               <CardContent className={classes.cardContent}>
@@ -131,7 +163,15 @@ const Home = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item lg={4} md={4} sm={4} xs={4}>
+          <Grid
+            item
+            lg={4}
+            md={4}
+            sm={4}
+            xs={4}
+            data-aos="fade-up"
+            data-aos-delay="2000"
+          >
             <Card className={classes.root} elevation="0">
               <CardMedia className={classes.media} image={bestseller3} />
               <CardContent className={classes.cardContent}>
@@ -158,78 +198,19 @@ const Home = () => {
           </IconButton>
         </Link>
       </div>
-      <div className={classes.sub}>
+      <div className={classes.sub} data-aos="fade-up" data-aos-delay="800">
         <Typography className={classes.aboutUsHeader}>Subscriptions</Typography>
         <Typography className={classes.category}>Classic</Typography>
         <Typography className={classes.deliveryPrize}>
           35$ per delivery
         </Typography>
-
-        {/* <div className={classes.subContainer}>
-          <div
-            className={classes.shopNow}
-            style={{ position: "relative", right: "20%", bottom: "20%" }}
-          >
-            <Typography
-              variant="h6"
-              className={classes.shopNowText}
-              style={{ fontSize: "12px" }}
-            >
-              Handle nå
-            </Typography>
-            <a class="link" href="#">
-              <IconButton>
-                <ArrowRightAlt />
-              </IconButton>
-            </a>
-          </div>
-          <div>
-            <Typography className={classes.aboutParagraph}>
-              A selection of timeless bouquets that are fit for any occasion.
-              The first delivery includes a glass vase, making it even easier
-              for your recipient to showcase their gift{" "}
-            </Typography>
-          </div>
-          <div
-            className={classes.shopNow}
-            style={{ position: "relative", right: "20%", bottom: "20%" }}
-          >
-            <Typography
-              variant="h6"
-              className={classes.shopNowText}
-              style={{ fontSize: "12px" }}
-            >
-              Handle nå
-            </Typography>
-            <a class="link" href="#">
-              <IconButton>
-                <ArrowRightAlt />
-              </IconButton>
-            </a>
-          </div>
-        </div> */}
       </div>
-      {/* <div style={{ height: "200px", display: "flex" }}>
-        <Carousel
-          autoplay
-          style={{ backgroundColor: "white", height: "200px" }}
-        >
-          <div>
-            <div className={classes.contentStyle}>1</div>
-          </div>
-          <div>
-            <h3 className={classes.contentStyle}>2</h3>
-          </div>
-          <div>
-            <h3 className={classes.contentStyle}>3</h3>
-          </div>
-          <div>
-            <h3 className={classes.contentStyle}>4</h3>
-          </div>
-        </Carousel>
-      </div> */}
 
-      <div className={classes.newsletter}>
+      <div
+        className={classes.newsletter}
+        data-aos="fade-up"
+        data-aos-delay="800"
+      >
         <div className={classes.textDiv}>
           <Typography
             className={classes.aboutUsHeader}
@@ -260,85 +241,6 @@ const Home = () => {
           </Button>
         </div>
       </div>
-
-      <footer className={classes.footer}>
-        <div className={classes.logoDiv}>
-          <Typography className={classes.footerLogo}>Blomster</Typography>
-          <Typography className={classes.footerLogo}>Werket</Typography>
-        </div>
-        <div className={classes.logoDiv}>
-          <ul className={classes.footerList}>
-            <li>
-              <a className={classes.footerText} href="./">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a className={classes.footerText} href="./">
-                Sale
-              </a>
-            </li>
-            <li>
-              <a className={classes.footerText} href="./">
-                Delivery & Payment
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={classes.logoDiv}>
-          <ul className={classes.footerList}>
-            <li>
-              <a className={classes.footerText} href="./">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a className={classes.footerText} href="./">
-                FAQ
-              </a>
-            </li>
-            <li>
-              <a className={classes.footerText} href="./">
-                Subscriptions
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className={classes.logoDiv}>
-          <ul className={classes.footerList}>
-            <li>
-              <a className={classes.footerText} href="./">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a className={classes.footerText} href="./">
-                +47 000 00 00
-              </a>
-            </li>
-            <li>
-              <a className={classes.footerText} href="./">
-                info@bw.com
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className={classes.logoDiv}>
-          <Typography className={classes.footerText}>Follow Us</Typography>
-          <div className={classes.socialButtonsFooter}>
-            <IconButton>
-              <Facebook style={{ fill: "#F8F8F9" }} />
-            </IconButton>
-            <IconButton>
-              <Instagram style={{ fill: "#F8F8F9" }} />
-            </IconButton>
-            <IconButton>
-              <Twitter style={{ fill: "#F8F8F9" }} />
-            </IconButton>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 };
