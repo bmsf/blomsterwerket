@@ -13,58 +13,20 @@ const Footer = () => {
         <Typography className={classes.footerLogo}>Blomster</Typography>
         <Typography className={classes.footerLogo}>Werket</Typography>
       </div>
-      <div className={classes.logoDiv}>
-        <ul className={classes.footerList}>
-          <li>
-            <a className={classes.footerText} href="./">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a className={classes.footerText} href="./">
-              Sale
-            </a>
-          </li>
-          <li>
-            <a className={classes.footerText} href="./">
-              Delivery & Payment
-            </a>
-          </li>
-        </ul>
-      </div>
 
       <div className={classes.logoDiv}>
         <ul className={classes.footerList}>
-          <li>
-            <a className={classes.footerText} href="./">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a className={classes.footerText} href="./">
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a className={classes.footerText} href="./">
-              Subscriptions
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className={classes.logoDiv}>
-        <ul className={classes.footerList}>
-          <li>
+          <li className={classes.li}>
             <a className={classes.footerText} href="./">
               Contact
             </a>
           </li>
-          <li>
+          <li className={classes.li}>
             <a className={classes.footerText} href="./">
               +47 000 00 00
             </a>
           </li>
-          <li>
+          <li className={classes.li}>
             <a className={classes.footerText} href="./">
               info@bw.com
             </a>

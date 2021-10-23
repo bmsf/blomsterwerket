@@ -6,7 +6,7 @@ import ProductInfo from "./pages/ProductInfo/index";
 
 import Navbar from "./components/Navbar/index";
 import Checkout from "./components/CheckoutForm/Checkout/index";
-// import Footer from "./components/Footer/index";
+import Footer from "./components/Footer/index";
 
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
@@ -15,12 +15,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import InfoBar from "./components/InfoBar";
 
 const App = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
+  const [order, setOrder] = useState({});
+  const [errorMessage, setErrorMessage ] = useState('');
 
+  
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
 
@@ -55,6 +57,24 @@ const App = () => {
     setCart(cart);
   };
 
+  const refreshcart = async () => {
+    const newCart = await commerce.cart.refresh();
+    
+    setCart(cart);
+  }
+
+  const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+    try {
+      const incomingOrder = await commerce.checkout.capture(checkoutTokenId, newOrder);
+
+      setOrder(incomingOrder);
+      refreshcart();
+    }
+    catch(error) {
+      setErrorMessage(error.data.error.message);
+    }
+  }
+
   useEffect(() => {
     fetchProducts();
     fetchCart();
@@ -65,7 +85,12 @@ const App = () => {
 
   const theme = createMuiTheme({
     typography: {
-      h3: { fontFamily: "Roseritta" },
+      fontFamily: `"Jost", "Helvetica", "Arial", sans-serif`,
+      h1: { fontFamily: "Roseritta" },
+      h2: { fontFamily: "Jost" },
+      h3: { fontFamily: "Jost" },
+      h4: { fontFamily: "Roseritta" },
+      h5: { fontFamily: "Roseritta" },
       h6: { fontFamily: "Jost" },
       body1: { fontFamily: "Jost", fontWeight: "300" },
       body2: { fontFamily: "Jost", fontWeight: "400" },
@@ -91,7 +116,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Router>
         <div className="app">
-          <InfoBar />
+          {/* <InfoBar /> */}
           <Navbar totalItems={cart.total_items} />
           <Switch>
             <Route exact path="/">
@@ -120,10 +145,10 @@ const App = () => {
               />
             </Route>
             <Route exact path="/checkout">
-              <Checkout cart={cart} />
+              <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}/>
             </Route>
           </Switch>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     </ThemeProvider>

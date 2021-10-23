@@ -27,12 +27,13 @@ const Navbar = ({ totalItems }) => {
 
   const handleClick = () => {
     setOpenMenu(!openMenu);
-    if (!openMenu) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
   };
+
+  if (openMenu) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "unset";
+  }
 
   return (
     <>
@@ -41,6 +42,7 @@ const Navbar = ({ totalItems }) => {
           <IconButton onClick={handleClick}>
             {openMenu ? <Close /> : <Menu className={classes.menuButton} />}
           </IconButton>
+
           <Link to="./">
             <div className={classes.logoDivMobile}>
               <Typography

@@ -8,7 +8,6 @@ const Store = ({ totalProducts, products, onAddToCart }) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.toolbar} />
-      <div className={classes.toolbar} />
       <div className={classes.productsAndFilter}>
         <Typography className={classes.header}>
           Produkter: {totalProducts}

@@ -39,10 +39,9 @@ export default makeStyles((theme) => ({
   roundedImgFrontpage: {
     width: "22%",
     objectFit: "contain",
-    paddingBottom: theme.spacing(10),
     [theme.breakpoints.down("xs")]: {
       minWidth: "40%",
-      paddingBottom: theme.spacing(5),
+      marginBottom: theme.spacing(2),
     },
   },
   textDivFrontpage: {
@@ -83,14 +82,10 @@ export default makeStyles((theme) => ({
   },
 
   shopNow: {
-    display: "flex",
-    justifyContent: "flex-end",
-    width: "100%",
+    justifyContent: "center",
+    width: "50%",
     alignItems: "center",
-    [theme.breakpoints.down("xs")]: {
-      paddingRight: theme.spacing(7),
-      paddingTop: theme.spacing(2),
-    },
+    [theme.breakpoints.down("xs")]: {},
   },
 
   shopNowText: {
@@ -101,7 +96,9 @@ export default makeStyles((theme) => ({
 
   aboutUsSection: {
     display: "flex",
-    justifyContent: "space-between",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignContent: "center",
     paddingBottom: theme.spacing(15),
     [theme.breakpoints.down("xs")]: {
       paddingTop: theme.spacing(10),
@@ -109,21 +106,22 @@ export default makeStyles((theme) => ({
   },
   utsidebutikk: {
     objectFit: "contain",
+    position: "relative",
     width: "40%",
-
+    left: "40%",
     borderTopLeftRadius: "500px",
     borderBottomLeftRadius: "500px",
     [theme.breakpoints.down("md")]: {
       width: "35%",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "43%",
+      width: "60%",
     },
   },
   aboutUsTextContainer: {
     position: "relative",
     left: "15%",
-    width: "50%",
+    width: "60%",
     [theme.breakpoints.down("md")]: {
       left: "13%",
     },
@@ -149,12 +147,11 @@ export default makeStyles((theme) => ({
   //Best sellers
   gridContainer: {
     maxWidth: "65%",
-    paddingTop: theme.spacing(5),
+    marginTop: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
       maxWidth: "90%",
     },
   },
-
   root: {
     maxWidth: "100%",
     backgroundColor: "#F5FAFD",
@@ -167,17 +164,11 @@ export default makeStyles((theme) => ({
     width: "100%",
     borderTopLeftRadius: "150px",
     borderTopRightRadius: "150px",
-    [theme.breakpoints.down("xs")]: {
-      height: "150px",
-    },
-    [theme.breakpoints.up("sm")]: {
-      height: "200px",
+    [theme.breakpoints.up("xs")]: {
+      height: "180px",
     },
     [theme.breakpoints.up("md")]: {
       height: "250px",
-    },
-    [theme.breakpoints.up("lg")]: {
-      height: "330px",
     },
   },
 
@@ -241,7 +232,8 @@ export default makeStyles((theme) => ({
     },
   },
   deliveryPrize: {
-    paddingTop: theme.spacing(2),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
     fontFamily: "Jost",
     fontSize: "1vw",
     fontWeight: "bold",
@@ -297,5 +289,15 @@ export default makeStyles((theme) => ({
       width: "100%",
     },
   },
-  //Footer
+  //share on socials
+  shareOnSocials: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: theme.spacing(2),
+  },
+  img: {
+    objectFit: "contain",
+    width: "100px"
+  },
 }));

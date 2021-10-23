@@ -3,9 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
-  toolbar: theme.mixins.toolbar,
   appBar: {
-    position: "relative",
     backgroundColor: "#F5FAFD",
     color: "#0A1F11",
     zIndex: 1,
@@ -23,8 +21,8 @@ export default makeStyles((theme) => ({
   toolBar: {
     display: "flex",
     justifyContent: "center",
-    paddingTop: "10px",
     [theme.breakpoints.down("md")]: {
+     
       justifyContent: "space-between",
     },
   },
@@ -59,7 +57,6 @@ export default makeStyles((theme) => ({
       position: "relative",
     },
   },
-  
 
   //Mobile
 
@@ -81,7 +78,7 @@ export default makeStyles((theme) => ({
     backgroundColor: "#666666",
     height: "100%",
     [theme.breakpoints.down("xs")]: {
-      paddingTop: "40px",
+      paddingTop: "35px",
     },
   },
   openMobileMenu: {

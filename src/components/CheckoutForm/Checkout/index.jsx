@@ -17,8 +17,8 @@ import PaymentForm from "../PaymentForm";
 
 const steps = ["Leveringsmetode", "Betaling"];
 
-const Checkout = ({ cart }) => {
-  const [activeStep, setActiveStep] = useState(0);
+const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
+  const [activeStep, setActiveStep] = useState(1);
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [shippingData, setShippingData] = useState({});
   const classes = useStyles();
@@ -35,10 +35,10 @@ const Checkout = ({ cart }) => {
     };
 
     generateToken(cart);
-  });
+  }, [cart]);
 
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  // const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
 
   const test = (data) => {
     setShippingData(data);
@@ -52,7 +52,7 @@ const Checkout = ({ cart }) => {
     activeStep === 0 ? (
       <AddressForm checkoutToken={checkoutToken} test={test} />
     ) : (
-      <PaymentForm shippingData={shippingData} />
+      <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} backStep={backStep} onCaptureCheckout={onCaptureCheckout}/>
     );
 
   return (

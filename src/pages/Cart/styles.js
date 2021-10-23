@@ -98,4 +98,34 @@ export default makeStyles((theme) => ({
     alignSelf: "flex-end",
     padding: theme.spacing(3),
   },
+
+  // New Cart
+  columnContainerOrders: {
+    display: "flex",
+    flexDirection: "column",
+    width: "55%",
+    marginRight: theme.spacing(2),
+  },
+
+  columnContainerSummary: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    width: "50%",
+  },
+  summary: {
+    display: "flex",
+    flexDirection: "column",
+    backgroundColor: "#D0DAE3",
+    borderRadius: "5px",
+    minHeight: "400px",
+    padding: theme.spacing(3),
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
+  },
+  rows: {
+    display: "flex",
+    justifyContent: "space-between",
+    margin: "20px",
+  },
 }));

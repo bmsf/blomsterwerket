@@ -19,6 +19,10 @@ import bestseller2 from "../../assets/bestseller2.png";
 import bestseller3 from "../../assets/bestseller3.png";
 import rounded from "../../assets/roundedbig.png";
 import omoss2 from "../../assets/omoss.jpeg";
+import interiør from "../../assets/interiør.jpeg";
+import delt from "../../assets/mainpage768px.jpg";
+import delt2 from "../../assets/mainpage.jpeg";
+import delt3 from "../../assets/darkblue.jpg";
 
 import "../../index.css";
 
@@ -67,15 +71,12 @@ const Home = () => {
             <Typography className={classes.headerFrontpage} variant="h1">
               Werket
             </Typography>
-            <div>
-              <Link className={classes.shopNow} to="/shop">
-                <IconButton>
-                  <Typography variant="h6" className={classes.shopNowText}>
-                    Handle nå
-                  </Typography>
-
-                  <ArrowRightAlt />
-                </IconButton>
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <Link to="/shop" class="arrow">
+                <Typography variant="h6" className={classes.shopNowText}>
+                  Handle nå
+                  <ArrowRightAlt style={{ paddingTop: "10px" }} />
+                </Typography>
               </Link>
             </div>
           </div>
@@ -92,7 +93,7 @@ const Home = () => {
             data-aos="fade-up"
             data-aos-delay="800"
           >
-            About us
+            Om oss
           </Typography>
           <Typography
             className={classes.aboutParagraph}
@@ -112,8 +113,8 @@ const Home = () => {
           src={omoss2}
           className={classes.utsidebutikk}
           alt="Bilde av butikken utvendig"
-          // data-aos="fade-left"
-          // data-aos-delay="800"
+          data-aos="fade-left"
+          data-aos-delay="800"
         />
       </div>
       <div className={classes.bestSellerSection}>
@@ -198,12 +199,24 @@ const Home = () => {
           </IconButton>
         </Link>
       </div>
+
       <div className={classes.sub} data-aos="fade-up" data-aos-delay="800">
-        <Typography className={classes.aboutUsHeader}>Subscriptions</Typography>
-        <Typography className={classes.category}>Classic</Typography>
+        <Typography className={classes.aboutUsHeader} variant="h3">
+          Abonner på blomster
+        </Typography>
+        <Typography className={classes.category}>Klassisk blomst</Typography>
         <Typography className={classes.deliveryPrize}>
           35$ per delivery
         </Typography>
+        <Button
+          variant="contained"
+          style={{ height: "40px" }}
+          color="primary"
+          component={Link}
+          to="/checkout"
+        >
+          Velg denne planen
+        </Button>
       </div>
 
       <div
@@ -221,8 +234,7 @@ const Home = () => {
           <Typography className={classes.aboutParagraph}>
             People connect through the values and ideas. Bring extra value to
             those who would like to stay connected. Build up a community of fans
-            and people who would like to stay connected. Build up a community of
-            fans and people who resonate with your brand
+            and people who would like to stay connected.
           </Typography>
         </div>
         <div className={classes.inputDiv}>
@@ -239,6 +251,34 @@ const Home = () => {
           >
             Submit
           </Button>
+        </div>
+      </div>
+
+      <div className={classes.shareOnSocials}>
+        <div
+          style={{ display: "flex", marginTop: "50px", marginBottom: "10px" }}
+        >
+          <Typography variant="h3">bruk</Typography>
+          <Typography
+            style={{
+              fontWeight: "700",
+              fontSize: "3rem",
+              marginLeft: "8px",
+              lineHeight: "1.167",
+              marginLeft: "20px",
+            }}
+          >
+            #BWlove
+          </Typography>
+        </div>
+        <Typography>på bildene dere legger ut på instagram</Typography>
+        <div
+          style={{ display: "flex", marginTop: "10px", marginBottom: "50px" }}
+        >
+          <img className={classes.img} src={interiør} />
+          <img className={classes.img} src={delt} />
+          <img className={classes.img} src={delt3} />
+          <img className={classes.img} src={delt2} />
         </div>
       </div>
     </main>

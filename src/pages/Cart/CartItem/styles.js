@@ -2,23 +2,27 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   media: {
-    width: 260,
+    width: 120,
+    height: 120,
     objectFit: "contain",
+    borderRadius: "5px",
   },
   cartCard: {
     display: "flex",
     justifyContent: "space-between",
-    minHeight: "150px",
+    minHeight: "250px",
     backgroundColor: "#F5FAFD",
+    paddingTop: theme.spacing(2),
   },
   cardContent: {
     display: "flex",
-    alignItems: "center",
+    flexDirection: "column",
+    gap: "20px",
   },
   cardActions: {
-    justifyContent: "space-between",
     fontFamily: "Jost",
-    padding: theme.spacing(2),
+    display: "flex",
+    flexDirection: "column",
   },
   buttons: {
     display: "flex",
@@ -29,9 +33,12 @@ export default makeStyles((theme) => ({
   itemName: {
     fontFamily: "Jost",
     fontSize: "20px",
-    padding: theme.spacing(3),
   },
   removeItemButton: {
     fontFamily: "Jost",
+  },
+  cards: {
+    height: "20px",
+    borderRadius: "30px",
   },
 }));

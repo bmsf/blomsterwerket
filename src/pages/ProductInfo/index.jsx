@@ -32,11 +32,7 @@ const ProductInfo = () => {
     setChecked(event.target.checked);
   };
 
-  useEffect(() => {}, []);
-
   setTimeout(() => {
-    // commerce.products.retrieve(id).then((product) => setTitle(product.name));
-
     commerce.products.retrieve(id).then((product) => {
       setImg(product.media.source);
       setPrice(product.price.formatted_with_code);

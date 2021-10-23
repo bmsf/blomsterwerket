@@ -14,20 +14,17 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
     height: "330px",
     width: "100%",
-    borderTopLeftRadius: "150px",
-    borderTopRightRadius: "150px",
 
     "&:hover": {
       transition: "opacity 500ms ease",
       borderRadius: "0",
-      "& $hoverDiv": {
-        display: "inline",
-        fontFamily: "Roseritta",
-        fontSize: "18px",
-        fontWeight: "400",
-        color: "white",
-        padding: theme.spacing(0.5),
-      },
+      borderTopLeftRadius: "150px",
+      borderTopRightRadius: "150px",
+      transform: "scale(1)",
+      filter: "blur(0px)",
+      opacity: "1",
+      boxShadow: "1px 1px 10px 0px rgba(0,0,0,0.1)",
+      "& $hoverDiv": {},
     },
     [theme.breakpoints.down("xs")]: {
       height: "250px",
@@ -48,7 +45,7 @@ export default makeStyles((theme) => ({
     flexWrap: "wrap",
   },
   header: {
-    fontFamily: "Roseritta",
+    fontFamily: "Jost",
     fontSize: "20px",
     fontWeight: "400",
   },
