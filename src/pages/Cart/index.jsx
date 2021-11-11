@@ -109,7 +109,7 @@ const Cart = ({
   );
 };
 
-{
+
   /* <Grid
         container
         spacing={3}
@@ -182,6 +182,6 @@ const Cart = ({
           </Button>
         </div>
       </Grid> */
-}
+
 
 export default Cart;

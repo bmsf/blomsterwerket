@@ -15,10 +15,10 @@ import FormInput from "./CustomTextField";
 const AddressForm = ({ checkoutToken, test, setShippingData, nextStep, }) => {
   const [shippingCountries, setShippingCountries] = useState([]);
   const [shippingCountry, setShippingCountry] = useState("");
-  const [shippingSubdivisions, setShippingSubdivisions] = useState([]);
-  const [shippingSubdivision, setShippingSubdivision] = useState("");
-  const [shippingOptions, setShippingOptions] = useState([]);
-  const [shippingOption, setShippingOption] = useState("");
+  // const [shippingSubdivisions, setShippingSubdivisions] = useState([]);
+  // const [shippingSubdivision, setShippingSubdivision] = useState("");
+  // const [shippingOptions, setShippingOptions] = useState([]);
+  // const [shippingOption, setShippingOption] = useState("");
   const methods = useForm();
 
   const countries = Object.entries(shippingCountries).map(([code, name]) => ({
@@ -35,18 +35,18 @@ const AddressForm = ({ checkoutToken, test, setShippingData, nextStep, }) => {
     setShippingCountry(Object.keys(countries)[0]);
   };
 
-  const fetchSubdivisions = async (countryCode) => {
-    const { subdivisions } = await commerce.services.localeListSubdivisions(
-      countryCode
-    );
+  // const fetchSubdivisions = async (countryCode) => {
+  //   const { subdivisions } = await commerce.services.localeListSubdivisions(
+  //     countryCode
+  //   );
 
-    setShippingSubdivisions(subdivisions);
-    setShippingSubdivision(Object.keys(subdivisions)[0]);
-  };
+  //   setShippingSubdivisions(subdivisions);
+  //   setShippingSubdivision(Object.keys(subdivisions)[0]);
+  // };
 
   useEffect(() => {
     fetchShippingCountries(checkoutToken.id);
-  }, []);
+  },);
 
   return (
     <>
